@@ -12,6 +12,11 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
     bool have4 = false;
     bool have5 = false;
     bool canDrop = false;
+    bool canPick1 = false;
+    bool canPick2 = false;
+    bool canPick3 = false;
+    bool canPick4 = false;
+    bool canPick5 = false;
     
     [SerializeField] Transform firePosition;
     [SerializeField] GameObject onePrefab;
@@ -27,6 +32,11 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
         shooting = FindObjectOfType<Shooting>();
     }
 
+    // void OnTriggerEnter2D(Collider2D other)
+    // {
+    //     if ()
+    // }
+
     void OnTriggerStay2D(Collider2D other)
     {
         
@@ -38,6 +48,7 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
             haveShipPart = true;
             canDrop = false;
             shooting.BlockShoot();
+            canPick1 = false;
         }
         else if (Input.GetKeyDown("e") && other.CompareTag("2") && !haveShipPart)
         {
@@ -46,6 +57,7 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
             haveShipPart = true;
             canDrop = false;
             shooting.BlockShoot();
+            canPick2 = false;
         }
         else if (Input.GetKeyDown("e") && other.CompareTag("3") && !haveShipPart)
         {
@@ -54,6 +66,7 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
             haveShipPart = true;
             canDrop = false;
             shooting.BlockShoot();
+            canPick3 = false;
         }
         else if (Input.GetKeyDown("e") && other.CompareTag("4") && !haveShipPart)
         {
@@ -62,6 +75,7 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
             haveShipPart = true;
             canDrop = false;
             shooting.BlockShoot();
+            canPick4 = false;
         }
         else if (Input.GetKeyDown("e") && other.CompareTag("5") && !haveShipPart)
         {
@@ -70,6 +84,7 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
             haveShipPart = true;
             canDrop = false;
             shooting.BlockShoot();
+            canPick5 = false;
         }
     }
 
