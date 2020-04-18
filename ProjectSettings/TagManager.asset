@@ -6,17 +6,6 @@ TagManager:
   tags:
   - player
   - Bullet
-  - Objects
-  - O2
-  - Ground
-  - 1
-  - 2
-  - 3
-  - 4
-  - 5
-  - 6
-  - 7
-  - 8
   layers:
   - Default
   - TransparentFX
@@ -26,8 +15,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Bullets
+  - Enemi
   - 
   - 
   - 
