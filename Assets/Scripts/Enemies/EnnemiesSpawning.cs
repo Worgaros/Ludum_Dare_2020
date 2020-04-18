@@ -23,6 +23,7 @@ public class EnnemiesSpawning : MonoBehaviour
     bool canSpawn = true;
 
     [SerializeField] GameObject oxygenBubblePrefab;
+    [SerializeField] GameObject shootingEnemyPrefab;
 
     void Start()
     {
@@ -47,10 +48,19 @@ public class EnnemiesSpawning : MonoBehaviour
                 }
                 break;
             case State.SPAWN_ENNEMIS:
-
+                int randomNumber;
+                randomNumber = Random.Range(0, 3);
+                Debug.Log(randomNumber);
                 ChoseSpawnPoint();
-                    GameObject ennemi = Instantiate(prefabEnnemi,SpawnPositions[spawnIndex].position, Quaternion.identity);
-                    
+
+                if (randomNumber == 2)
+                {
+                    GameObject ennemi2 = Instantiate(shootingEnemyPrefab, SpawnPositions[spawnIndex].position, Quaternion.identity);
+                }
+                else
+                {
+                    GameObject ennemi = Instantiate(prefabEnnemi, SpawnPositions[spawnIndex].position, Quaternion.identity);
+                }
                 
                 state = State.WAIT_TO_SPAWN;
                 break;

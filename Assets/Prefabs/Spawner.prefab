@@ -58,3 +58,7 @@ MonoBehaviour:
   waitTimer: 5
   prefabEnnemi: {fileID: 4055771179338086865, guid: cee36d86061f1b74aa9c023305ecb0bd,
     type: 3}
+  oxygenBubblePrefab: {fileID: 3407196286372847131, guid: 55eb8e9bcdf0c67458939fee845c8ef2,
+    type: 3}
+  shootingEnemyPrefab: {fileID: 6858048132573236519, guid: 5eb21d8c0501bd84e9ec64d5d413ac92,
+    type: 3}
