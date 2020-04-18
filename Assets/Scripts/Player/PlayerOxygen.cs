@@ -28,20 +28,17 @@ public class PlayerOxygen : MonoBehaviour
         Debug.Log("oxygen" + currentOxygen);
         oxygen.setOxygen(currentOxygen, maxOxygen);
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "oxygen")
-        {
-            PlayerHealth.TakeHealth();
-            Score.GetOxygenPoint();
-        }
-    }
+    
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("oxygenBubble"))
         {
+<<<<<<< Updated upstream
             currentOxygen += 1f;
+=======
+            Score.GetOxygenPoint();
+            currentOxygen += 0.5f;
+>>>>>>> Stashed changes
         }
     }
 }

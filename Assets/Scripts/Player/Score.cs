@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Score : MonoBehaviour
 {
-
     static float score = 0f;
     static float oxygenPoint = 10f;
     static float bulletPoint = 10f;

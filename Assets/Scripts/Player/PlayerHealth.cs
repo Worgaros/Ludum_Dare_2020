@@ -7,8 +7,7 @@ public class PlayerHealth : MonoBehaviour
     static float life = 100f;
     static float dmg = 10f;
     static float health = 10f;
-
-
+    
     [SerializeField] GameObject gameOverPanel;
 
     private void Start()
@@ -21,8 +20,6 @@ public class PlayerHealth : MonoBehaviour
         {
            // gameOverPanel.SetActive(true);
         }
-       
-
     }
 
     public static void TakeDmg()
