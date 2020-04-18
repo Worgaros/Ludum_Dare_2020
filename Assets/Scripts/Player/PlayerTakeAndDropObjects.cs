@@ -24,15 +24,25 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
     [SerializeField] GameObject sixPrefab;
     [SerializeField] GameObject sevenPrefab;
     [SerializeField] GameObject heightPrefab;
-    
+
+    Shooting shooting;
+
+    void Start()
+    {
+        shooting = FindObjectOfType<Shooting>();
+    }
+
     void OnTriggerStay2D(Collider2D other)
     {
+        
+        //Pick
         if (Input.GetKeyDown("e") && other.CompareTag("1") && !haveShipPart)
         {
             Destroy(other.gameObject);
             have1 = true;
             haveShipPart = true;
             canDrop = false;
+            shooting.BlockShoot();
         }
         else if (Input.GetKeyDown("e") && other.CompareTag("2") && !haveShipPart)
         {
@@ -40,6 +50,7 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
             have2 = true;
             haveShipPart = true;
             canDrop = false;
+            shooting.BlockShoot();
         }
         else if (Input.GetKeyDown("e") && other.CompareTag("3") && !haveShipPart)
         {
@@ -47,6 +58,7 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
             have3 = true;
             haveShipPart = true;
             canDrop = false;
+            shooting.BlockShoot();
         }
         else if (Input.GetKeyDown("e") && other.CompareTag("4") && !haveShipPart)
         {
@@ -54,6 +66,7 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
             have4 = true;
             haveShipPart = true;
             canDrop = false;
+            shooting.BlockShoot();
         }
         else if (Input.GetKeyDown("e") && other.CompareTag("5") && !haveShipPart)
         {
@@ -61,6 +74,7 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
             have5 = true;
             haveShipPart = true;
             canDrop = false;
+            shooting.BlockShoot();
         }
         else if (Input.GetKeyDown("e") && other.CompareTag("6") && !haveShipPart)
         {
@@ -68,6 +82,7 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
             have6 = true;
             haveShipPart = true;
             canDrop = false;
+            shooting.BlockShoot();
         }
         else if (Input.GetKeyDown("e") && other.CompareTag("7") && !haveShipPart)
         {
@@ -75,6 +90,7 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
             have7 = true;
             haveShipPart = true;
             canDrop = false;
+            shooting.BlockShoot();
         }
         else if (Input.GetKeyDown("e") && other.CompareTag("8") && !haveShipPart)
         {
@@ -82,11 +98,14 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
             have8 = true;
             haveShipPart = true;
             canDrop = false;
+            shooting.BlockShoot();
         }
     }
 
     void Update()
     {
+        
+        //drop
         if (Input.GetKeyUp("e"))
         {
             canDrop = true;
@@ -96,48 +115,56 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
             have1 = false;
             haveShipPart = false;
             GameObject One = Instantiate(onePrefab, firePosition.position, firePosition.rotation);
+            shooting.UnblockShoot();
         }
         else if (have2 && Input.GetKeyDown("e") && canDrop)
         {
             have2 = false;
             haveShipPart = false;
             GameObject Two = Instantiate(twoPrefab, firePosition.position, firePosition.rotation);
+            shooting.UnblockShoot();
         }
         else if (have3 && Input.GetKeyDown("e") && canDrop)
         {
             have3 = false;
             haveShipPart = false;
             GameObject Three = Instantiate(threePrefab, firePosition.position, firePosition.rotation);
+            shooting.UnblockShoot();
         }
         else if (have4 && Input.GetKeyDown("e") && canDrop)
         {
             have4 = false;
             haveShipPart = false;
             GameObject Four = Instantiate(fourPrefab, firePosition.position, firePosition.rotation);
+            shooting.UnblockShoot();
         }
         else if (have5 && Input.GetKeyDown("e") && canDrop)
         {
             have5 = false;
             haveShipPart = false;
             GameObject Five = Instantiate(fivePrefab, firePosition.position, firePosition.rotation);
+            shooting.UnblockShoot();
         }
         else if (have6 && Input.GetKeyDown("e") && canDrop)
         {
             have6 = false;
             haveShipPart = false;
             GameObject Six = Instantiate(sixPrefab, firePosition.position, firePosition.rotation);
+            shooting.UnblockShoot();
         }
         else if (have7 && Input.GetKeyDown("e") && canDrop)
         {
             have7 = false;
             haveShipPart = false;
             GameObject Seven = Instantiate(sevenPrefab, firePosition.position, firePosition.rotation);
+            shooting.UnblockShoot();
         }
         else if (have8 && Input.GetKeyDown("e") && canDrop)
         {
             have8 = false;
             haveShipPart = false;
             GameObject Eight = Instantiate(heightPrefab, firePosition.position, firePosition.rotation);
+            shooting.UnblockShoot();
         }
     }
 }

@@ -48,10 +48,13 @@
           <e p="Bullet.cs" t="Include" />
           <e p="Enemies" t="Include">
             <e p="EnnemiesSpawning.cs" t="Include" />
+            <e p="EnnemyBullet.cs" t="Include" />
             <e p="EnnemyFollow.cs" t="Include" />
             <e p="EnnemyHealth.cs" t="Include" />
+            <e p="EnnemyShoot.cs" t="Include" />
             <e p="MeleeAttack.cs" t="Include" />
           </e>
+          <e p="OxygenBubble.cs" t="Include" />
           <e p="Player" t="Include">
             <e p="CameraFollow.cs" t="Include" />
             <e p="PlayerController.cs" t="Include" />
