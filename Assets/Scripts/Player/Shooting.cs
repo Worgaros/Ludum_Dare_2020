@@ -75,11 +75,11 @@ public class Shooting : MonoBehaviour
 
                 break;
             case State.SHOOTING:
+                Shoot();
                 if (!isOverHeating)
                 {
                     anim.SetBool("IsShooting", true);
                 }
-                Shoot();
                 state = State.COOLDOWN;
                 if (Input.GetButtonUp("Fire1"))
                 {
