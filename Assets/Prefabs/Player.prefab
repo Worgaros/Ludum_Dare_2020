@@ -346,6 +346,7 @@ GameObject:
   - component: {fileID: 9079266522092693341}
   - component: {fileID: 5522819839410794494}
   - component: {fileID: 5054005254322946306}
+  - component: {fileID: 2087253699}
   m_Layer: 10
   m_Name: perso (1)
   m_TagString: player
@@ -416,7 +417,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1188630209
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: e4d7ea68ade7ecd4c99ff2e3a288ea6f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -444,9 +445,10 @@ MonoBehaviour:
   firePosition: {fileID: 4060617420601756123}
   bulletPrefab: {fileID: 7392102452853298621, guid: 1065e03afe3b23140bb8bed8aabe93ed,
     type: 3}
-  bulletForce: 15
+  bulletForce: 18
   bulletNumber: 3
   bulletTime: 0.1
+  maxOverheat: 5
 --- !u!114 &2231868856584712947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1134,12 +1136,25 @@ MonoBehaviour:
     type: 3}
   fivePrefab: {fileID: 134499853842819303, guid: 96e16094f34e7fd4ebcb1c07c787fa39,
     type: 3}
-  sixPrefab: {fileID: 127535950201728419, guid: 76a6971b58c417f4b9e8a4ed4cebd75d,
-    type: 3}
-  sevenPrefab: {fileID: 606639635394026683, guid: 1c0769d4ccedb29479328ec33a88d32e,
-    type: 3}
-  heightPrefab: {fileID: 8148677961067079101, guid: 0c5f8f47f8bf7a445b2f305efb92b815,
-    type: 3}
+--- !u!95 &2087253699
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2886911478156576476}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 966afe361e64821498e998acd11d305c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4438633043277140955
 GameObject:
   m_ObjectHideFlags: 0
