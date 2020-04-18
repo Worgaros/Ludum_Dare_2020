@@ -13,6 +13,7 @@ public class Shooting : MonoBehaviour
     float bulletTimer = 0;
     bool canShoot = false;
     bool shooting = false;
+    bool shotBlocked = false;
 
     // Start is called before the first frame update
     void Start()
@@ -100,12 +101,20 @@ public class Shooting : MonoBehaviour
 
     void Shoot()
     {
-       
-          GameObject bullet = Instantiate(bulletPrefab, firePosition.position, firePosition.rotation);
-          Rigidbody2D bulletBody = bullet.GetComponent<Rigidbody2D>();
-          bulletBody.AddForce(firePosition.up * bulletForce, ForceMode2D.Impulse);
-         
+        if (shotBlocked)
+        {
+            GameObject bullet = Instantiate(bulletPrefab, firePosition.position, firePosition.rotation);
+            Rigidbody2D bulletBody = bullet.GetComponent<Rigidbody2D>();
+            bulletBody.AddForce(firePosition.up * bulletForce, ForceMode2D.Impulse);
+        }
     }
 
-   
+   public void BlockShoot()
+    {
+        shotBlocked = true;
+    }
+    public void UnblockShoot()
+    {
+        shotBlocked = false;
+    }
 }
