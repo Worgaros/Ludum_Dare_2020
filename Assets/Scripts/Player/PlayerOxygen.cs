@@ -20,6 +20,7 @@ public class PlayerOxygen : MonoBehaviour
         if (collision.gameObject.tag == "Oxygen")
         {
             PlayerHealth.TakeHealth();
+            Score.GetOxygenPoint();
         }
     }
 }

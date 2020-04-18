@@ -322,6 +322,7 @@ GameObject:
   - component: {fileID: 1922427211}
   - component: {fileID: 1922427215}
   - component: {fileID: 1922427216}
+  - component: {fileID: 1922427217}
   m_Layer: 0
   m_Name: Ennemy
   m_TagString: Untagged
@@ -480,5 +481,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f58e2c8df202d4b4482390087d81282f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1922427217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1922427209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cedd20f2d130f9469459bda17c2405b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
