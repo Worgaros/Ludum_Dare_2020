@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class PlayerOxygen : MonoBehaviour
 {
-  
-
     [SerializeField] float maxOxygen = 50;
     float currentOxygen;
 
@@ -14,16 +12,20 @@ public class PlayerOxygen : MonoBehaviour
     private void Start()
     {
         oxygen = FindObjectOfType<OxygenDisplay>();
-        // gameOverPanel.SetActive(false);
         currentOxygen = maxOxygen;
     }
-    // Update is called once per frame
+
     void Update()
     {
-        //if ( currentOxygen <= 0)
-        //{
-        //    PlayerHealth.TakeDmg();
-        //}
+        if ( currentOxygen <= 0)
+        {
+            PlayerHealth.TakeDmg();
+        }
+        else
+        {
+            PlayerHealth.TakeHealth();
+        }
+        
         currentOxygen -= Time.deltaTime;
         Debug.Log("oxygen" + currentOxygen);
         oxygen.setOxygen(currentOxygen, maxOxygen);
@@ -33,9 +35,6 @@ public class PlayerOxygen : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("oxygenBubble"))
         {
-            currentOxygen += 1f;
-         
-
             Score.GetOxygenPoint();
             currentOxygen += 0.5f;
 
