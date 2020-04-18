@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnnemyFollow : MonoBehaviour
+public class EnnemyBullet : MonoBehaviour
 {
     private Transform player;
     private Rigidbody2D body;
 
     [SerializeField] float speed = 1f;
 
-    bool isFollowing = false;
+    bool isShooting = false;
 
     void Start()
     {
@@ -19,19 +19,14 @@ public class EnnemyFollow : MonoBehaviour
 
     void Update()
     {
-
-        if (isFollowing)
-        {
-            body.velocity = (player.transform.position - transform.position).normalized * speed;
-            Debug.Log("move");
-        }
+        body.velocity = (player.transform.position - transform.position).normalized * speed;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "player")
+        if (collision.gameObject.tag == "Bullet")
         {
-            isFollowing = true;
+            Destroy(gameObject);
         }
     }
 }

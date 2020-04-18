@@ -91,7 +91,7 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
         {
             canDrop = true;
         }
-        else if (have1 && Input.GetKeyDown("e") && canDrop)
+        if (have1 && Input.GetKeyDown("e") && canDrop)
         {
             have1 = false;
             haveShipPart = false;
