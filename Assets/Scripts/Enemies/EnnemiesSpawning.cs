@@ -10,7 +10,7 @@ public class EnnemiesSpawning : MonoBehaviour
 
     [SerializeField] int ennemiToSpawn = 0;
     int ennemiNumber;
-    int currentWave = 0;
+   //int currentWave = 0;
     [SerializeField] float waitTimer = 0;
     float waitTime = 0;
     [SerializeField] GameObject prefabEnnemi;
@@ -21,6 +21,8 @@ public class EnnemiesSpawning : MonoBehaviour
 
     Transform player;
     bool canSpawn = true;
+
+    [SerializeField] GameObject oxygenBubblePrefab;
 
     void Start()
     {
@@ -77,5 +79,20 @@ public class EnnemiesSpawning : MonoBehaviour
     void ChoseSpawnPoint()
     {
         spawnIndex = Random.Range(0, SpawnPositions.Length);
+    }
+
+  public void SpawnOxygen(Vector2 deathPosition)
+    {
+        Debug.Log("oxygen");
+        int bubbleNumber;
+        bubbleNumber = Random.Range(1, 6);
+
+        for (int i = 0; i <= bubbleNumber; i++)
+        {
+            Vector2 randomPosition = new Vector2(Random.Range(deathPosition.x + 2, deathPosition.x - 2), Random.Range(deathPosition.y + 2, deathPosition.y - 2));
+          // randomPosition += deathPosition;
+            GameObject oxygenBubble = Instantiate(oxygenBubblePrefab, randomPosition, Quaternion.identity);
+           // oxygenBubble.transform.position = Random.insideUnitCircle * 2;
+        }
     }
 }

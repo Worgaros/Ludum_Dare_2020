@@ -7,13 +7,18 @@ public class EnnemyHealth : MonoBehaviour
     float health = 100f;
     float dmg = 10f;
 
+    EnnemiesSpawning EnnemiesSpawning;
+
+    private void Start()
+    {
+        EnnemiesSpawning = FindObjectOfType<EnnemiesSpawning>();
+    }
 
     private void Update()
     {
         if (health <= 0)
         {
-            Score.GetEnnemyPoint();
-            Destroy(gameObject);
+            Death();
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -31,5 +36,13 @@ public class EnnemyHealth : MonoBehaviour
             Score.GetBulletPoint();
             health -= dmg;
         }
+    }
+
+    void Death()
+    {
+        Vector2 deathPosition = new Vector2(transform.position.x, transform.position.y);
+        EnnemiesSpawning.SpawnOxygen(deathPosition);
+        Score.GetEnnemyPoint();
+        Destroy(gameObject);
     }
 }

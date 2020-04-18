@@ -26,6 +26,7 @@ public class Bullet : MonoBehaviour
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Enemi"))
         {
+            Debug.Log("screenShake");
             Camera.main.GetComponent<ScreenShakeBehavior>().TriggerShake(0.1f);
         }
         GameObject effect = Instantiate(explosion, transform.position, Quaternion.identity);
