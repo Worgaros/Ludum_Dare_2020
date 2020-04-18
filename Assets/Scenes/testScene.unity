@@ -285,10 +285,10 @@ RectTransform:
   m_Father: {fileID: 873231921}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -771, y: 473}
-  m_SizeDelta: {x: 348.78998, y: 33.320496}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 113, y: -42}
+  m_SizeDelta: {x: 190.83472, y: 20.80421}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &383059782
 MonoBehaviour:
@@ -693,7 +693,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -1266,12 +1266,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3880841003090406908, guid: 68bb8a7564c255842a9865f5e83c01a3,
         type: 3}
-      propertyPath: oxygenBubblePrefab
-      value: 
-      objectReference: {fileID: 3407196286372847131, guid: 55eb8e9bcdf0c67458939fee845c8ef2,
-        type: 3}
-    - target: {fileID: 3880841003090406908, guid: 68bb8a7564c255842a9865f5e83c01a3,
-        type: 3}
       propertyPath: SpawnPositions.Array.data[0]
       value: 
       objectReference: {fileID: 1540259965}
@@ -1502,11 +1496,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 27536392177067601, guid: 7b215239739a75f4a8b40ad9853864e4,
-        type: 3}
-      propertyPath: maxOxygen
-      value: 50
-      objectReference: {fileID: 0}
     - target: {fileID: 38217606841077637, guid: 7b215239739a75f4a8b40ad9853864e4,
         type: 3}
       propertyPath: m_Name

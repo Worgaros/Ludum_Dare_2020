@@ -16,6 +16,7 @@ TagManager:
   - 7
   - 4
   - PNJ
+  - oxygenBubble
   layers:
   - Default
   - TransparentFX

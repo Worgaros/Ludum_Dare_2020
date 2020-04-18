@@ -41,7 +41,7 @@ public class PlayerOxygen : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("oxygenBubble"))
         {
-            currentOxygen += 0.5f;
+            currentOxygen += 1f;
         }
     }
 }
