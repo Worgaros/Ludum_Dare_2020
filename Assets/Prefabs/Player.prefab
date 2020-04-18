@@ -215,7 +215,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePosition: {fileID: 38217604932878862}
-  bulletPrefab: {fileID: 0}
+  bulletPrefab: {fileID: 7392102452853298621, guid: 1065e03afe3b23140bb8bed8aabe93ed,
+    type: 3}
   bulletForce: 5
 --- !u!61 &38217606841077636
 BoxCollider2D:
