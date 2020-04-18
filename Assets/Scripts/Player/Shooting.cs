@@ -8,6 +8,10 @@ public class Shooting : MonoBehaviour
     [SerializeField] Transform firePosition;
     [SerializeField] GameObject bulletPrefab;
     [SerializeField] float bulletForce = 5f;
+    [SerializeField] int bulletNumber = 3;
+    [SerializeField] float bulletTime = 0.1f;
+    float bulletTimer = 0;
+    bool canShoot = false;
 
     // Start is called before the first frame update
     void Start()
@@ -20,14 +24,25 @@ public class Shooting : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            Shoot();
+           
+           
+                for (int i = 0; i <= bulletNumber; i++)
+                {
+                    Shoot();
+                }
+            
         }
     }
 
     void Shoot()
     {
-      GameObject bullet =  Instantiate(bulletPrefab, firePosition.position, firePosition.rotation);
-      Rigidbody2D bulletBody =  bullet.GetComponent<Rigidbody2D>();
-        bulletBody.AddForce(firePosition.up * bulletForce, ForceMode2D.Impulse);
+       
+            {
+                GameObject bullet = Instantiate(bulletPrefab, firePosition.position, firePosition.rotation);
+                Rigidbody2D bulletBody = bullet.GetComponent<Rigidbody2D>();
+                bulletBody.AddForce(firePosition.up * bulletForce, ForceMode2D.Impulse);
+                canShoot = false;
+            }
+        
     }
 }

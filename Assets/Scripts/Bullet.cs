@@ -24,7 +24,11 @@ public class Bullet : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-       GameObject effect = Instantiate(explosion, transform.position, Quaternion.identity);
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Enemi"))
+        {
+            Camera.main.GetComponent<ScreenShakeBehavior>().TriggerShake(0.1f);
+        }
+        GameObject effect = Instantiate(explosion, transform.position, Quaternion.identity);
         Destroy(effect, 0.5f);
         Destroy(gameObject);
     }
