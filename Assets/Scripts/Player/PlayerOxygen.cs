@@ -33,11 +33,10 @@ public class PlayerOxygen : MonoBehaviour
     
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("oxygenBubble"))
+        if (collision.gameObject.tag == "oxygenBubble")
         {
             Score.GetOxygenPoint();
             currentOxygen += 0.5f;
-
         }
     }
 }
