@@ -9,12 +9,12 @@ public class Score : MonoBehaviour
     static float oxygenPoint = 10f;
     static float bulletPoint = 10f;
     static float ennemyPoint = 50f;
+    static float shipPartPoint = 100f;
 
     public static void GetOxygenPoint()
     {
         score += oxygenPoint;
     }
-
     public static void GetBulletPoint()
     {
         score += bulletPoint;
@@ -22,5 +22,9 @@ public class Score : MonoBehaviour
     public static void GetEnnemyPoint()
     {
         score += ennemyPoint;
+    }
+    public static void GetShipPartPoint()
+    {
+        score += shipPartPoint;
     }
 }
