@@ -23,6 +23,7 @@ public class EnnemyFollow : MonoBehaviour
         if (direction < playerDistance)
         {
             body.velocity = (player.transform.position - transform.position).normalized * speed;
+            Debug.Log("move");
         }
     }
     
