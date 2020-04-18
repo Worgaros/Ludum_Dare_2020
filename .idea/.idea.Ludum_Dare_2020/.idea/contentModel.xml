@@ -45,7 +45,6 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
-          <e p="Bullet.cs" t="Include" />
           <e p="Enemies" t="Include">
             <e p="EnnemiesSpawning.cs" t="Include" />
             <e p="EnnemyBullet.cs" t="Include" />
@@ -54,7 +53,6 @@
             <e p="EnnemyShoot.cs" t="Include" />
             <e p="MeleeAttack.cs" t="Include" />
           </e>
-          <e p="OxygenBubble.cs" t="Include" />
           <e p="Player" t="Include">
             <e p="CameraFollow.cs" t="Include" />
             <e p="PlayerController.cs" t="Include" />
@@ -64,7 +62,14 @@
             <e p="Score.cs" t="Include" />
             <e p="Shooting.cs" t="Include" />
           </e>
-          <e p="ScreenShakeBehavior.cs" t="Include" />
+          <e p="PNJ" t="Include">
+            <e p="PNJTakeShipParts.cs" t="Include" />
+          </e>
+          <e p="World" t="Include">
+            <e p="Bullet.cs" t="Include" />
+            <e p="OxygenBubble.cs" t="Include" />
+            <e p="ScreenShakeBehavior.cs" t="Include" />
+          </e>
         </e>
       </e>
       <e p="Ludum_Dare_2020.sln" t="IncludeFlat" />

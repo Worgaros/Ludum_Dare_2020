@@ -11,19 +11,14 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
     bool have3 = false;
     bool have4 = false;
     bool have5 = false;
-    bool have6 = false;
-    bool have7 = false;
-    bool have8 = false;
     bool canDrop = false;
+    
     [SerializeField] Transform firePosition;
     [SerializeField] GameObject onePrefab;
     [SerializeField] GameObject twoPrefab;
     [SerializeField] GameObject threePrefab;
     [SerializeField] GameObject fourPrefab;
     [SerializeField] GameObject fivePrefab;
-    [SerializeField] GameObject sixPrefab;
-    [SerializeField] GameObject sevenPrefab;
-    [SerializeField] GameObject heightPrefab;
 
     Shooting shooting;
 
@@ -76,30 +71,6 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
             canDrop = false;
             shooting.BlockShoot();
         }
-        else if (Input.GetKeyDown("e") && other.CompareTag("6") && !haveShipPart)
-        {
-            Destroy(other.gameObject);
-            have6 = true;
-            haveShipPart = true;
-            canDrop = false;
-            shooting.BlockShoot();
-        }
-        else if (Input.GetKeyDown("e") && other.CompareTag("7") && !haveShipPart)
-        {
-            Destroy(other.gameObject);
-            have7 = true;
-            haveShipPart = true;
-            canDrop = false;
-            shooting.BlockShoot();
-        }
-        else if (Input.GetKeyDown("e") && other.CompareTag("8") && !haveShipPart)
-        {
-            Destroy(other.gameObject);
-            have8 = true;
-            haveShipPart = true;
-            canDrop = false;
-            shooting.BlockShoot();
-        }
     }
 
     void Update()
@@ -145,25 +116,27 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
             GameObject Five = Instantiate(fivePrefab, firePosition.position, firePosition.rotation);
             shooting.UnblockShoot();
         }
-        else if (have6 && Input.GetKeyDown("e") && canDrop)
+        
+        
+        Debug.Log("1" + have1);
+        Debug.Log("2" + have2);
+        Debug.Log("3" + have3);
+        Debug.Log("4" + have4);
+        Debug.Log("5" + have5);
+        
+        Debug.Log(haveShipPart);
+    }
+
+    public void removeShipParts()
+    {
+        if (haveShipPart)
         {
-            have6 = false;
+            have1 = false;
+            have2 = false;
+            have3 = false;
+            have4 = false;
+            have5 = false;
             haveShipPart = false;
-            GameObject Six = Instantiate(sixPrefab, firePosition.position, firePosition.rotation);
-            shooting.UnblockShoot();
-        }
-        else if (have7 && Input.GetKeyDown("e") && canDrop)
-        {
-            have7 = false;
-            haveShipPart = false;
-            GameObject Seven = Instantiate(sevenPrefab, firePosition.position, firePosition.rotation);
-            shooting.UnblockShoot();
-        }
-        else if (have8 && Input.GetKeyDown("e") && canDrop)
-        {
-            have8 = false;
-            haveShipPart = false;
-            GameObject Eight = Instantiate(heightPrefab, firePosition.position, firePosition.rotation);
             shooting.UnblockShoot();
         }
     }
