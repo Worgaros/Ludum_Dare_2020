@@ -4,15 +4,29 @@ using UnityEngine;
 
 public class PlayerOxygen : MonoBehaviour
 {
-    float oxygen = 0f;
+  
 
+    [SerializeField] float maxOxygen = 50;
+    float currentOxygen;
+
+    OxygenDisplay oxygen;
+
+    private void Start()
+    {
+        oxygen = FindObjectOfType<OxygenDisplay>();
+        // gameOverPanel.SetActive(false);
+        currentOxygen = maxOxygen;
+    }
     // Update is called once per frame
     void Update()
     {
-        if ( oxygen <= 0)
-        {
-            PlayerHealth.TakeDmg();
-        }
+        //if ( currentOxygen <= 0)
+        //{
+        //    PlayerHealth.TakeDmg();
+        //}
+        currentOxygen -= Time.deltaTime;
+        Debug.Log("oxygen" + currentOxygen);
+        oxygen.setOxygen(currentOxygen, maxOxygen);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

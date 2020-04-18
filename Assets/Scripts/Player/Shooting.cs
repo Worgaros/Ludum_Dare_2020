@@ -41,7 +41,7 @@ public class Shooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("overHeat"+overHeat);
+      //  Debug.Log("overHeat"+overHeat);
         switch(state)
         {
             case State.NOT_SHOOTING:
