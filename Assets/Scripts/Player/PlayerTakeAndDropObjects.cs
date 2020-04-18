@@ -101,43 +101,43 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
         {
             have2 = false;
             haveShipPart = false;
-            GameObject Two = Instantiate(onePrefab, firePosition.position, firePosition.rotation);
+            GameObject Two = Instantiate(twoPrefab, firePosition.position, firePosition.rotation);
         }
         else if (have3 && Input.GetKeyDown("e") && canDrop)
         {
             have3 = false;
             haveShipPart = false;
-            GameObject Three = Instantiate(onePrefab, firePosition.position, firePosition.rotation);
+            GameObject Three = Instantiate(threePrefab, firePosition.position, firePosition.rotation);
         }
         else if (have4 && Input.GetKeyDown("e") && canDrop)
         {
             have4 = false;
             haveShipPart = false;
-            GameObject Four = Instantiate(onePrefab, firePosition.position, firePosition.rotation);
+            GameObject Four = Instantiate(fourPrefab, firePosition.position, firePosition.rotation);
         }
         else if (have5 && Input.GetKeyDown("e") && canDrop)
         {
             have5 = false;
             haveShipPart = false;
-            GameObject Five = Instantiate(onePrefab, firePosition.position, firePosition.rotation);
+            GameObject Five = Instantiate(fivePrefab, firePosition.position, firePosition.rotation);
         }
         else if (have6 && Input.GetKeyDown("e") && canDrop)
         {
             have6 = false;
             haveShipPart = false;
-            GameObject Six = Instantiate(onePrefab, firePosition.position, firePosition.rotation);
+            GameObject Six = Instantiate(sixPrefab, firePosition.position, firePosition.rotation);
         }
         else if (have7 && Input.GetKeyDown("e") && canDrop)
         {
             have7 = false;
             haveShipPart = false;
-            GameObject Seven = Instantiate(onePrefab, firePosition.position, firePosition.rotation);
+            GameObject Seven = Instantiate(sevenPrefab, firePosition.position, firePosition.rotation);
         }
         else if (have8 && Input.GetKeyDown("e") && canDrop)
         {
             have8 = false;
             haveShipPart = false;
-            GameObject Eight = Instantiate(onePrefab, firePosition.position, firePosition.rotation);
+            GameObject Eight = Instantiate(heightPrefab, firePosition.position, firePosition.rotation);
         }
     }
 }
