@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class PlayerOxygen : MonoBehaviour
 {
-    float Oxyen = 0f;
+    float oxygen = 0f;
 
     // Update is called once per frame
     void Update()
     {
-        if ( Oxyen <= 0)
+        if ( oxygen <= 0)
         {
             PlayerHealth.TakeDmg();
         }
