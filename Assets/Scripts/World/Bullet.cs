@@ -28,10 +28,10 @@ public class Bullet : MonoBehaviour
     {
         Camera.main.GetComponent<ScreenShakeBehavior>().TriggerShake(0.1f);
 
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Enemi"))
-        {
-            Camera.main.GetComponent<ScreenShakeBehavior>().TriggerShake(0.1f);
-        }
+        //if (collision.gameObject.layer == LayerMask.NameToLayer("Enemi"))
+        //{
+        //    Camera.main.GetComponent<ScreenShakeBehavior>().TriggerShake(0.1f);
+        //}
         GameObject effect = Instantiate(explosion, transform.position, Quaternion.identity);
         Destroy(effect, 0.5f);
         Destroy(gameObject);
