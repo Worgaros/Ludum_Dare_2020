@@ -50,7 +50,7 @@ public class EnnemiesSpawning : MonoBehaviour
             case State.SPAWN_ENNEMIS:
                 int randomNumber;
                 randomNumber = Random.Range(0, 3);
-                Debug.Log(randomNumber);
+               // Debug.Log(randomNumber);
                 ChoseSpawnPoint();
 
                 if (randomNumber == 2)
