@@ -33,10 +33,8 @@ public class PlayerOxygen : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("oxygenBubble"))
         {
-<<<<<<< Updated upstream
             currentOxygen += 1f;
-=======
->>>>>>> Stashed changes
+
             Score.GetOxygenPoint();
             currentOxygen += 0.5f;
         }
