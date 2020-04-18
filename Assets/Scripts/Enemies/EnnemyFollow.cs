@@ -10,6 +10,8 @@ public class EnnemyFollow : MonoBehaviour
     private int playerDistance = 10;
     [SerializeField] float speed = 1f;
 
+    bool isFollowing = false;
+
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
@@ -18,13 +20,21 @@ public class EnnemyFollow : MonoBehaviour
 
     void Update()
     {
-        var direction = Vector3.Distance(transform.position, player.transform.position);
+        // var direction = Vector3.Distance(transform.position, player.transform.position);
 
-        if (direction < playerDistance)
+        if (isFollowing)
         {
             body.velocity = (player.transform.position - transform.position).normalized * speed;
             Debug.Log("move");
         }
     }
-    
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "player")
+        {
+            isFollowing = true;
+        }
+    }
+
 }
