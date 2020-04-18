@@ -9,6 +9,7 @@ public class EnnemyShoot : MonoBehaviour
     float fireRate;
     float nextFire;
 
+    bool isShooting = false;
     private void Start()
     {
         fireRate = 1f;
@@ -22,10 +23,21 @@ public class EnnemyShoot : MonoBehaviour
 
     void CheckIfTimeToFire()
     {
-        if (Time.time > nextFire)
+        if (isShooting)
         {
-            Instantiate(bullet, transform.position, Quaternion.identity);
-            nextFire = Time.time + fireRate;
+            if (Time.time > nextFire)
+            {
+                Instantiate(bullet, transform.position, Quaternion.identity);
+                nextFire = Time.time + fireRate;
+            }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "player")
+        {
+            isShooting = true;
         }
     }
 }

@@ -19,7 +19,7 @@ public class EnnemyBullet : MonoBehaviour
 
     void Update()
     {
-        body.velocity = (player.transform.position - transform.position).normalized * speed;
+        body.velocity = (player.transform.position - transform.position).normalized * speed; 
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
