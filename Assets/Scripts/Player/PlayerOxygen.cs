@@ -37,4 +37,11 @@ public class PlayerOxygen : MonoBehaviour
             Score.GetOxygenPoint();
         }
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("oxygenBubble"))
+        {
+            currentOxygen += 0.5f;
+        }
+    }
 }

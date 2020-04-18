@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3407196286372847128}
   m_Layer: 12
   m_Name: OxygenBubble
-  m_TagString: Untagged
+  m_TagString: oxygenBubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3407196286372847131}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.54, y: -0.63, z: 0}
-  m_LocalScale: {x: 0.52360106, y: 0.52360106, z: 0.52360106}
+  m_LocalPosition: {x: -6.715, y: -0.805, z: 0}
+  m_LocalScale: {x: 0.3046953, y: 0.3046953, z: 0.3046953}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -110,9 +110,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.017189689, y: 0.05493907}
+  m_Offset: {x: -0.017189564, y: 0.019025266}
   serializedVersion: 2
-  m_Radius: 3.9309971
+  m_Radius: 7.127221
 --- !u!58 &3407196286372847128
 CircleCollider2D:
   m_ObjectHideFlags: 0
