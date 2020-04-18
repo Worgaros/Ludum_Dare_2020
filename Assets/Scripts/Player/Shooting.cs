@@ -24,12 +24,8 @@ public class Shooting : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-           
-           
-                for (int i = 0; i <= bulletNumber; i++)
-                {
-                    Shoot();
-                }
+               
+           Shoot();     
             
         }
     }

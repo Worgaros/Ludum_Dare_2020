@@ -13,6 +13,7 @@ public class EnnemyFollow : MonoBehaviour
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
+        player = FindObjectOfType<PlayerController>().transform;
     }
 
     void Update()
