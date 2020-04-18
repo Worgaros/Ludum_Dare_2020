@@ -138,7 +138,7 @@ public class Shooting : MonoBehaviour
             if(overHeat>=maxOverheat)
             {
                 BlockShoot();
-                overHeat = 10;
+                overHeat = maxOverheat;
                 isOverHeating = true;
                 startOverHeat = false;
             }
