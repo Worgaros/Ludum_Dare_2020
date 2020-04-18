@@ -6,11 +6,23 @@ TagManager:
   tags:
   - player
   - Bullet
+<<<<<<< Updated upstream
   - 5
   - 4
   - 1
   - 7
   - 2
+=======
+  - Ground
+  - 3
+  - 2
+  - 6
+  - 5
+  - 1
+  - 8
+  - 7
+  - 4
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
@@ -51,9 +63,9 @@ TagManager:
   - name: Background
     uniqueID: 2417763363
     locked: 0
-  - name: Player
-    uniqueID: 1188630209
-    locked: 0
   - name: Objects
     uniqueID: 4159208071
+    locked: 0
+  - name: Player
+    uniqueID: 1188630209
     locked: 0
