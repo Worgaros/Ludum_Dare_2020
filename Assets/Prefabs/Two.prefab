@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 6018866061131594100}
   - component: {fileID: 6018866061131594099}
   - component: {fileID: 6018866061131594098}
-  - component: {fileID: 6018866061131594097}
-  - component: {fileID: 6018866061131594096}
+  - component: {fileID: 7740695046113249916}
+  - component: {fileID: 5547788651410293761}
   m_Layer: 11
   m_Name: Two
   m_TagString: 2
@@ -106,23 +106,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &6018866061131594097
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6018866061131594111}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.005644631, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.37769872
---- !u!58 &6018866061131594096
+--- !u!58 &7740695046113249916
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -135,6 +119,84 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.01371079, y: 0}
+  m_Offset: {x: -0.018424505, y: 0.0051238807}
   serializedVersion: 2
-  m_Radius: 1.7421806
+  m_Radius: 2.5192108
+--- !u!60 &5547788651410293761
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018866061131594111}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.5043478, y: 1.4695653}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.7521739, y: -0.24782607}
+      - {x: 0.7521739, y: -0.07826087}
+      - {x: 0.74782604, y: -0.004347826}
+      - {x: 0.74347824, y: 0.030434782}
+      - {x: 0.5521739, y: 0.46086955}
+      - {x: 0.51304346, y: 0.54782605}
+      - {x: 0.46521738, y: 0.6521739}
+      - {x: 0.4521739, y: 0.65652174}
+      - {x: 0.3347826, y: 0.6695652}
+      - {x: 0.22173911, y: 0.68260866}
+      - {x: -0.24782607, y: 0.7347826}
+      - {x: -0.34347823, y: 0.7347826}
+      - {x: -0.39130434, y: 0.68260866}
+      - {x: -0.4347826, y: 0.63043475}
+      - {x: -0.47826084, y: 0.57391304}
+      - {x: -0.5260869, y: 0.5217391}
+      - {x: -0.5695652, y: 0.46956518}
+      - {x: -0.6130434, y: 0.41304347}
+      - {x: -0.66086954, y: 0.36086956}
+      - {x: -0.7043478, y: 0.30869564}
+      - {x: -0.74782604, y: 0.2521739}
+      - {x: -0.7521739, y: 0.24782607}
+      - {x: -0.7521739, y: 0.07826087}
+      - {x: -0.74782604, y: 0.004347826}
+      - {x: -0.74347824, y: -0.026086956}
+      - {x: -0.59999996, y: -0.2826087}
+      - {x: -0.42608693, y: -0.5869565}
+      - {x: -0.3869565, y: -0.6521739}
+      - {x: -0.32608694, y: -0.66521734}
+      - {x: -0.17826086, y: -0.67826086}
+      - {x: -0.030434782, y: -0.6956521}
+      - {x: 0.047826085, y: -0.7043478}
+      - {x: 0.08260869, y: -0.7086956}
+      - {x: 0.3043478, y: -0.7347826}
+      - {x: 0.36086956, y: -0.7347826}
+      - {x: 0.37826085, y: -0.71739125}
+      - {x: 0.47826084, y: -0.5913043}
+      - {x: 0.6956521, y: -0.31739128}
+    - - {x: -0.13913043, y: -0.08260869}
+      - {x: -0.20869565, y: -0.039130434}
+      - {x: -0.24782607, y: 0.013043478}
+      - {x: -0.19999999, y: 0.07391304}
+      - {x: -0.14782608, y: 0.11304347}
+      - {x: 0.017391304, y: 0.16521738}
+      - {x: 0.09130435, y: 0.16521738}
+      - {x: 0.19565217, y: 0.14347826}
+      - {x: 0.2521739, y: 0.10869565}
+      - {x: 0.31304348, y: 0.052173913}
+      - {x: 0.29130432, y: 0.021739129}
+      - {x: 0.20434782, y: -0.056521736}
+      - {x: 0.1347826, y: -0.086956516}
+      - {x: 0.060869563, y: -0.104347825}
+      - {x: -0.043478258, y: -0.104347825}
