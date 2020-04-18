@@ -8,7 +8,7 @@ public class MeleeAttack : MonoBehaviour
     {
         if (collision.gameObject.tag == "player")
         {
-
+            PlayerHealth.TakeDmg();
         }
     }
 }
