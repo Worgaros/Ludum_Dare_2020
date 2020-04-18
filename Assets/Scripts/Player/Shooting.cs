@@ -101,7 +101,7 @@ public class Shooting : MonoBehaviour
 
     void Shoot()
     {
-        if (shotBlocked)
+        if (!shotBlocked)
         {
             GameObject bullet = Instantiate(bulletPrefab, firePosition.position, firePosition.rotation);
             Rigidbody2D bulletBody = bullet.GetComponent<Rigidbody2D>();
