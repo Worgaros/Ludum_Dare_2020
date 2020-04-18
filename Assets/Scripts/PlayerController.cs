@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     Rigidbody2D body;
+    [SerializeField] Camera Cam;
+    Vector2 MousePosition;
     Vector2 direction;
     [SerializeField]float speed;
    // [SerializeField] PlayerAttack playerAttack;
@@ -36,42 +38,46 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        body.velocity = new Vector2(direction.x * speed, direction.y * speed);
+        body.velocity = new Vector2(direction.x * speed* Time.fixedDeltaTime, direction.y * speed* Time.fixedDeltaTime);
+        Vector2 lookDirection = MousePosition - body.position;
+        float angle = Mathf.Atan2(lookDirection.y,lookDirection.x)*Mathf.Rad2Deg-90f;
+        body.rotation = angle;
     }
 
     // Update is called once per frame
     void Update()
     {
-        direction = new Vector2(Input.GetAxis("Horizontal") * speed, Input.GetAxis("Vertical")*speed);
-        if(Input.GetKeyDown("q"))
-        {
-            attackCollider.enabled = true;
-        }
-        horizontalSpeed = Input.GetAxis("Horizontal");
+        direction = new Vector2(Input.GetAxisRaw("Horizontal") * speed, Input.GetAxisRaw("Vertical")*speed);
+        MousePosition = Cam.ScreenToWorldPoint(Input.mousePosition);
+        //if(Input.GetKeyDown("q"))
+        //{
+        //    attackCollider.enabled = true;
+        //}
+        //horizontalSpeed = Input.GetAxis("Horizontal");
        
-        if (horizontalSpeed > 0 && !facingLeft)
-        {
+        //if (horizontalSpeed > 0 && !facingLeft)
+        //{
            
-            facingLeft = true;
-            facingRight = false;
-            anim.transform.Rotate(0, 180, 0);
-        }
-        if (horizontalSpeed < 0 && !facingRight)
-        {
+        //    facingLeft = true;
+        //    facingRight = false;
+        //    anim.transform.Rotate(0, 180, 0);
+        //}
+        //if (horizontalSpeed < 0 && !facingRight)
+        //{
            
-            facingRight = true;
-            facingLeft = false;
-            anim.transform.Rotate(0, 180, 0);
-        }
+        //    facingRight = true;
+        //    facingLeft = false;
+        //    anim.transform.Rotate(0, 180, 0);
+        //}
 
-        if (Input.GetKeyDown(KeyCode.Space) && !trapspawned)
-        {
-            if (count <= 2)
-            {
-                GameObject invocation = Instantiate(trap, transform.position, Quaternion.identity);
-                count++;
-            }
-        }
+        //if (Input.GetKeyDown(KeyCode.Space) && !trapspawned)
+        //{
+        //    if (count <= 2)
+        //    {
+        //        GameObject invocation = Instantiate(trap, transform.position, Quaternion.identity);
+        //        count++;
+        //    }
+        //}
     }
     public void trapDown()
     {
