@@ -118,13 +118,13 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
         }
         
         
-        Debug.Log("1" + have1);
-        Debug.Log("2" + have2);
-        Debug.Log("3" + have3);
-        Debug.Log("4" + have4);
-        Debug.Log("5" + have5);
-        
-        Debug.Log(haveShipPart);
+        // Debug.Log("1" + have1);
+        // Debug.Log("2" + have2);
+        // Debug.Log("3" + have3);
+        // Debug.Log("4" + have4);
+        // Debug.Log("5" + have5);
+        //
+        // Debug.Log(haveShipPart);
     }
 
     public void removeShipParts()
@@ -139,5 +139,10 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
             haveShipPart = false;
             shooting.UnblockShoot();
         }
+    }
+
+    public void blockDrop()
+    {
+        canDrop = false;
     }
 }

@@ -7,6 +7,7 @@ public class PNJTakeShipParts : MonoBehaviour
 {
     int shipPartsGived = 0;
     const int maxShipParts = 5;
+    bool canGiveShipParts = false;
     PlayerTakeAndDropObjects playerTakeAndDropObjects;
 
     void Start()
@@ -14,21 +15,36 @@ public class PNJTakeShipParts : MonoBehaviour
         playerTakeAndDropObjects = FindObjectOfType<PlayerTakeAndDropObjects>();
     }
 
-    void OnTriggerStay2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("player") && Input.GetKeyDown("e"))
+        if (other.CompareTag("player"))
         {
-            playerTakeAndDropObjects.removeShipParts();
-            shipPartsGived++;
+            Debug.Log("ici");
+            canGiveShipParts = true;
+            playerTakeAndDropObjects.blockDrop();
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("player"))
+        {
+            canGiveShipParts = false;
         }
     }
 
     void Update()
     {
+        if (Input.GetKeyDown("e") && canGiveShipParts)
+        {
+            playerTakeAndDropObjects.removeShipParts();
+            shipPartsGived++;
+            canGiveShipParts = false;
+        }
+        
         if (shipPartsGived == maxShipParts)
         {
             Time.timeScale = 0;
         }
-        //Debug.Log(shipPartsGived);
     }
 }
