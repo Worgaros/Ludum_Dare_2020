@@ -345,6 +345,7 @@ GameObject:
   - component: {fileID: 2231868856584712947}
   - component: {fileID: 9079266522092693341}
   - component: {fileID: 5522819839410794494}
+  - component: {fileID: 5054005254322946306}
   m_Layer: 10
   m_Name: perso (1)
   m_TagString: player
@@ -415,7 +416,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1188630209
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: e4d7ea68ade7ecd4c99ff2e3a288ea6f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1110,6 +1111,35 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &5054005254322946306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2886911478156576476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7504bd346ee29e428aac5e1d40d1ccf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firePosition: {fileID: 4060617420601756123}
+  onePrefab: {fileID: 7533979285061134841, guid: 19f98e8f4cfc3df49a7dc6ddcedc7b62,
+    type: 3}
+  twoPrefab: {fileID: 6018866061131594111, guid: e4148039da9ec434cb5cc24421cebc1d,
+    type: 3}
+  threePrefab: {fileID: 6365926891994685223, guid: c4103facbbe3ec64598fb305062320f7,
+    type: 3}
+  fourPrefab: {fileID: 5851514374347365297, guid: 6c16fe01656bdd347a11478f8cc40064,
+    type: 3}
+  fivePrefab: {fileID: 134499853842819303, guid: 96e16094f34e7fd4ebcb1c07c787fa39,
+    type: 3}
+  sixPrefab: {fileID: 127535950201728419, guid: 76a6971b58c417f4b9e8a4ed4cebd75d,
+    type: 3}
+  sevenPrefab: {fileID: 606639635394026683, guid: 1c0769d4ccedb29479328ec33a88d32e,
+    type: 3}
+  heightPrefab: {fileID: 8148677961067079101, guid: 0c5f8f47f8bf7a445b2f305efb92b815,
+    type: 3}
 --- !u!1 &4438633043277140955
 GameObject:
   m_ObjectHideFlags: 0
