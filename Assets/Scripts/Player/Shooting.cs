@@ -21,10 +21,12 @@ public class Shooting : MonoBehaviour
     bool startCooling = false;
     bool isOverHeating = false;
 
+    Animator anim;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        anim = GetComponent<Animator>();
     }
 
     enum State
@@ -43,6 +45,7 @@ public class Shooting : MonoBehaviour
         switch(state)
         {
             case State.NOT_SHOOTING:
+                anim.SetBool("IsShooting", false);
                 bulletTimer = bulletTime;
                 if(Input.GetButtonDown("Fire1"))
                 {
@@ -72,6 +75,10 @@ public class Shooting : MonoBehaviour
 
                 break;
             case State.SHOOTING:
+                if (!isOverHeating)
+                {
+                    anim.SetBool("IsShooting", true);
+                }
                 Shoot();
                 state = State.COOLDOWN;
                 if (Input.GetButtonUp("Fire1"))
@@ -149,7 +156,7 @@ public class Shooting : MonoBehaviour
         if (startCooling&&!startOverHeat)
         {
             Debug.Log("cooling");
-            overHeat -= Time.deltaTime;
+            overHeat -= Time.deltaTime*2;
             if (overHeat <= 0)
             {
                 UnblockShoot();
