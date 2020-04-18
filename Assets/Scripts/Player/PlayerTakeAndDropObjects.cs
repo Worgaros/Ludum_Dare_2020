@@ -5,8 +5,14 @@ using UnityEngine;
 
 public class PlayerTakeAndDropObjects : MonoBehaviour
 {
-    void OnTriggerEnter(Collider other)
+    bool haveO2 = false;
+    bool haveShipPiece = false;
+    void OnTriggerStay2D(Collider2D other)
     {
-        Destroy(other);
+        if (Input.GetKeyDown("e") && other.CompareTag("Ship") && !haveShipPiece)
+        {
+            Destroy(other.gameObject);
+            haveShipPiece = true;
+        }
     }
 }
