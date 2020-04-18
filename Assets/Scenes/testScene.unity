@@ -588,6 +588,11 @@ PrefabInstance:
       propertyPath: Cam
       value: 
       objectReference: {fileID: 1875015098}
+    - target: {fileID: 4167461332187711870, guid: 7b215239739a75f4a8b40ad9853864e4,
+        type: 3}
+      propertyPath: bulletForce
+      value: 18
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b215239739a75f4a8b40ad9853864e4, type: 3}
 --- !u!1001 &2083448612
