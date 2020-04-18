@@ -178,9 +178,10 @@ GameObject:
   - component: {fileID: 685039449}
   - component: {fileID: 685039448}
   - component: {fileID: 685039447}
+  - component: {fileID: 685039451}
   m_Layer: 0
-  m_Name: Square
-  m_TagString: Untagged
+  m_Name: PNJ
+  m_TagString: PNJ
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -198,9 +199,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.060757846, y: 0}
+  m_Offset: {x: -0.012548748, y: 0.04266476}
   serializedVersion: 2
-  m_Radius: 2.038553
+  m_Radius: 1.3984787
 --- !u!61 &685039448
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -208,7 +209,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 685039446}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -291,6 +292,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &685039451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 685039446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b690ee8ac0483214aacd65a32e9cad2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &916282483 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4060617420601756123, guid: 7b215239739a75f4a8b40ad9853864e4,
@@ -489,12 +502,6 @@ MonoBehaviour:
   fourPrefab: {fileID: 5851514374347365297, guid: 6c16fe01656bdd347a11478f8cc40064,
     type: 3}
   fivePrefab: {fileID: 134499853842819303, guid: 96e16094f34e7fd4ebcb1c07c787fa39,
-    type: 3}
-  sixPrefab: {fileID: 127535950201728419, guid: 76a6971b58c417f4b9e8a4ed4cebd75d,
-    type: 3}
-  sevenPrefab: {fileID: 606639635394026683, guid: 1c0769d4ccedb29479328ec33a88d32e,
-    type: 3}
-  heightPrefab: {fileID: 8148677961067079101, guid: 0c5f8f47f8bf7a445b2f305efb92b815,
     type: 3}
 --- !u!1001 &1565331311
 PrefabInstance:
