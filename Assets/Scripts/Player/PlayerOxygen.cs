@@ -17,7 +17,7 @@ public class PlayerOxygen : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Oxygen")
+        if (collision.gameObject.tag == "oxygen")
         {
             PlayerHealth.TakeHealth();
             Score.GetOxygenPoint();

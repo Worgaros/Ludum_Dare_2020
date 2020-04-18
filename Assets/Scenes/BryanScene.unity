@@ -559,6 +559,12 @@ PrefabInstance:
       propertyPath: SpawnPositions.Array.data[9]
       value: 
       objectReference: {fileID: 316339506}
+    - target: {fileID: 3880841003090406908, guid: 68bb8a7564c255842a9865f5e83c01a3,
+        type: 3}
+      propertyPath: oxygenBubblePrefab
+      value: 
+      objectReference: {fileID: 3407196286372847131, guid: 55eb8e9bcdf0c67458939fee845c8ef2,
+        type: 3}
     - target: {fileID: 3880841003090406909, guid: 68bb8a7564c255842a9865f5e83c01a3,
         type: 3}
       propertyPath: m_Name

@@ -26,6 +26,7 @@ public class EnnemyBullet : MonoBehaviour
     {
         if (collision.gameObject.tag == "Bullet")
         {
+            Score.GetEnnemyBulletPoint();
             Destroy(gameObject);
         }
     }
