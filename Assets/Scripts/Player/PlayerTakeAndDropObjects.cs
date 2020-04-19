@@ -26,10 +26,12 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
     [SerializeField] GameObject fivePrefab;
 
     Shooting shooting;
+    TargetIndicator targetIndicator;
 
     void Start()
     {
         shooting = FindObjectOfType<Shooting>();
+        targetIndicator = FindObjectOfType<TargetIndicator>();
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -74,6 +76,7 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
             haveShipPart = false;
             GameObject One = Instantiate(onePrefab, firePosition.position, firePosition.rotation);
             shooting.UnblockShootTakeParts();
+            targetIndicator.DesactivateIndicator();
         }
         else if (have2 && Input.GetKeyDown("e") && canDrop)
         {
@@ -81,6 +84,7 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
             haveShipPart = false;
             GameObject Two = Instantiate(twoPrefab, firePosition.position, firePosition.rotation);
             shooting.UnblockShootTakeParts();
+            targetIndicator.DesactivateIndicator();
         }
         else if (have3 && Input.GetKeyDown("e") && canDrop)
         {
@@ -88,6 +92,7 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
             haveShipPart = false;
             GameObject Three = Instantiate(threePrefab, firePosition.position, firePosition.rotation);
             shooting.UnblockShootTakeParts();
+            targetIndicator.DesactivateIndicator();
         }
         else if (have4 && Input.GetKeyDown("e") && canDrop)
         {
@@ -95,6 +100,7 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
             haveShipPart = false;
             GameObject Four = Instantiate(fourPrefab, firePosition.position, firePosition.rotation);
             shooting.UnblockShootTakeParts();
+            targetIndicator.DesactivateIndicator();
         }
         else if (have5 && Input.GetKeyDown("e") && canDrop)
         {
@@ -102,6 +108,7 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
             haveShipPart = false;
             GameObject Five = Instantiate(fivePrefab, firePosition.position, firePosition.rotation);
             shooting.UnblockShootTakeParts();
+            targetIndicator.DesactivateIndicator();
         }
         
         //Pick
@@ -114,6 +121,7 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
             canDrop = false;
             shooting.BlockShootTakeParts();
             canPick1 = false;
+            targetIndicator.ActivateIndicator();
         }
         else if (Input.GetKeyDown("e") && canPick2)
         {
@@ -124,6 +132,7 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
             canDrop = false;
             shooting.BlockShootTakeParts();
             canPick2 = false;
+            targetIndicator.ActivateIndicator();
         }
         else if (Input.GetKeyDown("e") && canPick3)
         {
@@ -134,6 +143,7 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
             canDrop = false;
             shooting.BlockShootTakeParts();
             canPick3 = false;
+            targetIndicator.ActivateIndicator();
         }
         else if (Input.GetKeyDown("e") && canPick4)
         {
@@ -144,6 +154,7 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
             canDrop = false;
             shooting.BlockShootTakeParts();
             canPick4 = false;
+            targetIndicator.ActivateIndicator();
         }
         else if (Input.GetKeyDown("e") && canPick5)
         {
@@ -154,6 +165,7 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
             canDrop = false;
             shooting.BlockShootTakeParts();
             canPick5 = false;
+            targetIndicator.ActivateIndicator();
         }
     }
 

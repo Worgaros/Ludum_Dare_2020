@@ -5,6 +5,12 @@ using UnityEngine;
 public class TargetIndicator : MonoBehaviour
 {
     [SerializeField] Transform target;
+    [SerializeField] GameObject indicator;
+
+    private void Start()
+    {
+        indicator.SetActive(false);
+    }
 
     void Update()
     {
@@ -12,5 +18,15 @@ public class TargetIndicator : MonoBehaviour
 
         var angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+    }
+
+    public void ActivateIndicator()
+    { 
+        indicator.SetActive(true);
+    }
+
+    public void DesactivateIndicator()
+    {
+        indicator.SetActive(true);
     }
 }
