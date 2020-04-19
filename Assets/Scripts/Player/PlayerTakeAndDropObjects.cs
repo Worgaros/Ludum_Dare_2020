@@ -74,7 +74,7 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
         {
             have1 = false;
             haveShipPart = false;
-            GameObject One = Instantiate(onePrefab, firePosition.position, firePosition.rotation);
+            GameObject One = Instantiate(onePrefab, firePosition.position, onePrefab.transform.rotation);
             shooting.UnblockShootTakeParts();
             targetIndicator.DesactivateIndicator();
         }
@@ -82,7 +82,7 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
         {
             have2 = false;
             haveShipPart = false;
-            GameObject Two = Instantiate(twoPrefab, firePosition.position, firePosition.rotation);
+            GameObject Two = Instantiate(twoPrefab, firePosition.position, twoPrefab.transform.rotation);
             shooting.UnblockShootTakeParts();
             targetIndicator.DesactivateIndicator();
         }
@@ -90,7 +90,7 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
         {
             have3 = false;
             haveShipPart = false;
-            GameObject Three = Instantiate(threePrefab, firePosition.position, firePosition.rotation);
+            GameObject Three = Instantiate(threePrefab, firePosition.position, threePrefab.transform.rotation);
             shooting.UnblockShootTakeParts();
             targetIndicator.DesactivateIndicator();
         }
@@ -98,7 +98,7 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
         {
             have4 = false;
             haveShipPart = false;
-            GameObject Four = Instantiate(fourPrefab, firePosition.position, firePosition.rotation);
+            GameObject Four = Instantiate(fourPrefab, firePosition.position, fourPrefab.transform.rotation);
             shooting.UnblockShootTakeParts();
             targetIndicator.DesactivateIndicator();
         }
@@ -106,7 +106,7 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
         {
             have5 = false;
             haveShipPart = false;
-            GameObject Five = Instantiate(fivePrefab, firePosition.position, firePosition.rotation);
+            GameObject Five = Instantiate(fivePrefab, firePosition.position, fivePrefab.transform.rotation);
             shooting.UnblockShootTakeParts();
             targetIndicator.DesactivateIndicator();
         }
