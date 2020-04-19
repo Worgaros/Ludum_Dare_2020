@@ -32,61 +32,84 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
         shooting = FindObjectOfType<Shooting>();
     }
 
-    // void OnTriggerEnter2D(Collider2D other)
-    // {
-    //     if ()
-    // }
-
-    void OnTriggerStay2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        
-        //Pick
-        if (Input.GetKeyDown("e") && other.CompareTag("1") && !haveShipPart)
-        {
-            Destroy(other.gameObject);
-            have1 = true;
-            haveShipPart = true;
-            canDrop = false;
-            shooting.BlockShoot();
-            canPick1 = false;
-        }
-        else if (Input.GetKeyDown("e") && other.CompareTag("2") && !haveShipPart)
-        {
-            Destroy(other.gameObject);
-            have2 = true;
-            haveShipPart = true;
-            canDrop = false;
-            shooting.BlockShoot();
-            canPick2 = false;
-        }
-        else if (Input.GetKeyDown("e") && other.CompareTag("3") && !haveShipPart)
-        {
-            Destroy(other.gameObject);
-            have3 = true;
-            haveShipPart = true;
-            canDrop = false;
-            shooting.BlockShoot();
-            canPick3 = false;
-        }
-        else if (Input.GetKeyDown("e") && other.CompareTag("4") && !haveShipPart)
-        {
-            Destroy(other.gameObject);
-            have4 = true;
-            haveShipPart = true;
-            canDrop = false;
-            shooting.BlockShoot();
-            canPick4 = false;
-        }
-        else if (Input.GetKeyDown("e") && other.CompareTag("5") && !haveShipPart)
-        {
-            Destroy(other.gameObject);
-            have5 = true;
-            haveShipPart = true;
-            canDrop = false;
-            shooting.BlockShoot();
-            canPick5 = false;
-        }
+        if (other.CompareTag("1") && !haveShipPart)
+            canPick1 = true;
+        else if (other.CompareTag("2") && !haveShipPart)
+            canPick2 = true;
+        else if (other.CompareTag("3") && !haveShipPart)
+            canPick3 = true;
+        else if (other.CompareTag("4") && !haveShipPart)
+            canPick4 = true;
+        else if (other.CompareTag("5") && !haveShipPart)
+            canPick5 = true;
     }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("1"))
+            canPick1 = false;
+        else if (other.CompareTag("2"))
+            canPick2 = false;
+        else if (other.CompareTag("3"))
+            canPick3 = false;
+        else if (other.CompareTag("4"))
+            canPick4 = false;
+        else if (other.CompareTag("5"))
+            canPick5 = false;
+    }
+
+    // void OnTriggerStay2D(Collider2D other)
+    // {
+    //     
+    //     //Pick
+    //      if (Input.GetKeyDown("e") && other.CompareTag("1") && !haveShipPart)
+    //      {
+    //          Destroy(other.gameObject);
+    //          have1 = true;
+    //          haveShipPart = true;
+    //          canDrop = false;
+    //          shooting.BlockShoot();
+    //          canPick1 = false;
+    //      }
+    //      else if (Input.GetKeyDown("e") && other.CompareTag("2") && !haveShipPart)
+    //      {
+    //          Destroy(other.gameObject);
+    //          have2 = true;
+    //          haveShipPart = true;
+    //          canDrop = false;
+    //          shooting.BlockShoot();
+    //          canPick2 = false;
+    //      }
+    //      else if (Input.GetKeyDown("e") && other.CompareTag("3") && !haveShipPart)
+    //      {
+    //          Destroy(other.gameObject);
+    //          have3 = true;
+    //          haveShipPart = true;
+    //          canDrop = false;
+    //          shooting.BlockShoot();
+    //          canPick3 = false;
+    //      }
+    //      else if (Input.GetKeyDown("e") && other.CompareTag("4") && !haveShipPart)
+    //      {
+    //          Destroy(other.gameObject);
+    //          have4 = true;
+    //          haveShipPart = true;
+    //          canDrop = false;
+    //          shooting.BlockShoot();
+    //          canPick4 = false;
+    //      }
+    //      else if (Input.GetKeyDown("e") && other.CompareTag("5") && !haveShipPart)
+    //      {
+    //          Destroy(other.gameObject);
+    //          have5 = true;
+    //          haveShipPart = true;
+    //          canDrop = false;
+    //          shooting.BlockShoot();
+    //          canPick5 = false;
+    //      }
+    // }
 
     void Update()
     {
@@ -132,6 +155,60 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
             shooting.UnblockShoot();
         }
         
+        //Pick
+        if (Input.GetKeyDown("e") && canPick1)
+        {
+            GameObject one = GameObject.FindGameObjectWithTag("1");
+            Destroy(one);
+            have1 = true;
+            haveShipPart = true;
+            canDrop = false;
+            shooting.BlockShoot();
+            canPick1 = false;
+        }
+        else if (Input.GetKeyDown("e") && canPick2)
+        {
+            GameObject two = GameObject.FindGameObjectWithTag("2");
+            Destroy(two);
+            have2 = true;
+            haveShipPart = true;
+            canDrop = false;
+            shooting.BlockShoot();
+            canPick2 = false;
+        }
+        else if (Input.GetKeyDown("e") && canPick3)
+        {
+            GameObject three = GameObject.FindGameObjectWithTag("3");
+            Destroy(three);
+            have3 = true;
+            haveShipPart = true;
+            canDrop = false;
+            shooting.BlockShoot();
+            canPick3 = false;
+        }
+        else if (Input.GetKeyDown("e") && canPick4)
+        {
+            GameObject four = GameObject.FindGameObjectWithTag("4");
+            Destroy(four);
+            have4 = true;
+            haveShipPart = true;
+            canDrop = false;
+            shooting.BlockShoot();
+            canPick4 = false;
+        }
+        else if (Input.GetKeyDown("e") && canPick5)
+        {
+            GameObject five = GameObject.FindGameObjectWithTag("5");
+            Destroy(five);
+            have5 = true;
+            haveShipPart = true;
+            canDrop = false;
+            shooting.BlockShoot();
+            canPick5 = false;
+        }
+        
+        GameObject.FindGameObjectWithTag("player").GetComponent<Transform>();
+        
         
         // Debug.Log("1" + have1);
         // Debug.Log("2" + have2);
@@ -161,3 +238,4 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
         canDrop = false;
     }
 }
+
