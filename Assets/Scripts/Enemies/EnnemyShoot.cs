@@ -7,7 +7,7 @@ public class EnnemyShoot : MonoBehaviour
     [SerializeField] GameObject bullet;
     [SerializeField] Transform firePosition;
 
-    float fireRate;
+    [SerializeField]float fireRate;
     float nextFire;
 
     bool isShooting = false;

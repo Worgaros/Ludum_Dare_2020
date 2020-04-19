@@ -9,9 +9,20 @@ public class EnnemyHealth : MonoBehaviour
 
     EnnemiesSpawning EnnemiesSpawning;
 
+    Animator shootingEnnemyAnim;
+    Animator runningEnnemyAnim;
+
     private void Start()
     {
         EnnemiesSpawning = FindObjectOfType<EnnemiesSpawning>();
+        if(gameObject.CompareTag("shootingEnnemy"))
+        {
+            shootingEnnemyAnim = GetComponentInChildren<Animator>();
+        }
+        if (gameObject.CompareTag("runningEnnemy"))
+        {
+            runningEnnemyAnim = GetComponentInChildren<Animator>();
+        }
     }
 
     private void Update()
@@ -21,20 +32,21 @@ public class EnnemyHealth : MonoBehaviour
             Death();
         }
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Bullet")
-        {
-            Score.GetBulletPoint();
-            health -= dmg;
-        }
-    }
+   
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Bullet")
         {
             Score.GetBulletPoint();
             health -= dmg;
+            if (gameObject.CompareTag("shootingEnnemy"))
+            {
+                shootingEnnemyAnim.SetTrigger("isHurt");
+            }
+            if (gameObject.CompareTag("runningEnnemy")&&runningEnnemyAnim != null)
+            {
+                runningEnnemyAnim.SetTrigger("isHurt");
+            }
         }
     }
 

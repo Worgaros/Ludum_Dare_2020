@@ -19,6 +19,7 @@ TagManager:
   - oxygenBubble
   - enemy
   - ship
+  - shootingEnnemy
   layers:
   - Default
   - TransparentFX
