@@ -21,12 +21,18 @@ public class Shooting : MonoBehaviour
     bool startCooling = false;
     bool isOverHeating = false;
 
+    [SerializeField] float gunDispertion = 1;
+    [SerializeField] float gunBulletAngle = 1;
+
+    [SerializeField] float innaccuracy = 0.1f;
+
     Animator anim;
 
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
+         
     }
 
     enum State
@@ -172,8 +178,16 @@ public class Shooting : MonoBehaviour
         if (!shotBlocked)
         {
             GameObject bullet = Instantiate(bulletPrefab, firePosition.position, firePosition.rotation);
+            //
+            bullet.transform.position += (Vector3)Random.insideUnitCircle * gunDispertion;
+            
+            
+           // firePosition.rotation = Quaternion.AngleAxis(angle, firePosition.up);
+            
+            //
             Rigidbody2D bulletBody = bullet.GetComponent<Rigidbody2D>();
             bulletBody.AddForce(firePosition.up * bulletForce, ForceMode2D.Impulse);
+            
         }
     }
 

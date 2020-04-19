@@ -11,15 +11,28 @@ public class EnnemyBullet : MonoBehaviour
 
     bool isShooting = false;
 
+    PNJTakeShipParts mechano;
+    bool followMechano = false;
+
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
         player = FindObjectOfType<PlayerController>().transform;
+        mechano = FindObjectOfType<PNJTakeShipParts>();
     }
 
     void Update()
     {
-        body.velocity = (player.transform.position - transform.position).normalized * speed; 
+        followMechano = mechano.TellIfTarget();
+
+        if(!followMechano)
+        {
+            body.velocity = (player.transform.position - transform.position).normalized * speed; 
+        }
+        if(followMechano)
+        {
+            body.velocity = (mechano.gameObject.transform.position - transform.position).normalized * speed;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

@@ -10,6 +10,11 @@ public class PNJTakeShipParts : MonoBehaviour
     bool canGiveShipParts = false;
     PlayerTakeAndDropObjects playerTakeAndDropObjects;
 
+    [SerializeField] float installingTime = 20;
+    float installingTimer = 0;
+
+    bool isTheTarget = false;
+
     void Start()
     {
         playerTakeAndDropObjects = FindObjectOfType<PlayerTakeAndDropObjects>();
@@ -37,9 +42,20 @@ public class PNJTakeShipParts : MonoBehaviour
     {
         if (Input.GetKeyDown("e") && canGiveShipParts)
         {
+            installingTimer = installingTime;
             playerTakeAndDropObjects.removeShipParts();
             shipPartsGived++;
+            isTheTarget = true;
             canGiveShipParts = false;
+        }
+
+        if(isTheTarget)
+        {
+            installingTimer -= Time.deltaTime;
+            if(installingTimer<=0)
+            {
+                isTheTarget = false;
+            }
         }
         
         if (shipPartsGived == maxShipParts)
@@ -47,4 +63,10 @@ public class PNJTakeShipParts : MonoBehaviour
             Time.timeScale = 0;
         }
     }
+
+    public bool TellIfTarget()
+    {
+        return isTheTarget;
+    }
+
 }
