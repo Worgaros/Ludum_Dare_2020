@@ -18,6 +18,7 @@ TagManager:
   - PNJ
   - oxygenBubble
   - enemy
+  - ship
   layers:
   - Default
   - TransparentFX
