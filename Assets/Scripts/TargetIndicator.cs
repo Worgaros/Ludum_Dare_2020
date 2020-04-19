@@ -5,32 +5,28 @@ using UnityEngine;
 public class TargetIndicator : MonoBehaviour
 {
     [SerializeField] Transform target;
-
-    static bool indicator = false;
+    [SerializeField] GameObject indicator;
 
     private void Start()
     {
-        indicator = false;
+        indicator.SetActive(false);
     }
 
     void Update()
     {
-       if (indicator)
-        {
-            var direction = target.position - transform.position;
+        var direction = target.position - transform.position;
 
-            var angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-        }
+        var angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
 
     public void ActivateIndicator()
-    {
-        indicator = true;
+    { 
+        indicator.SetActive(true);
     }
 
     public void DesactivateIndicator()
     {
-        indicator = false;
+        indicator.SetActive(true);
     }
 }
