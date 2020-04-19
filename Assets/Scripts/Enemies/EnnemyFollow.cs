@@ -9,10 +9,15 @@ public class EnnemyFollow : MonoBehaviour
     PNJTakeShipParts mechano;
     private Rigidbody2D body;
 
+    [SerializeField] LayerMask whatIsGround;
+
     [SerializeField] float speed = 1f;
 
     bool isFollowing = false;
     bool followMechano = false;
+
+    bool destroy = false;
+    float checkRadius = 0.1f;
 
     void Start()
     {
@@ -25,6 +30,8 @@ public class EnnemyFollow : MonoBehaviour
     void Update()
     {
 
+       destroy = Physics2D.OverlapCircle(transform.position, checkRadius, whatIsGround);
+
         followMechano = mechano.TellIfTarget();
 
         if (isFollowing&&!followMechano)
@@ -35,6 +42,11 @@ public class EnnemyFollow : MonoBehaviour
         if(followMechano)
         {
             body.velocity = (mechanoTransform.transform.position - transform.position).normalized * speed;
+        }
+
+        if(destroy)
+        {
+            Destroy(gameObject);
         }
     }
 
