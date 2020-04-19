@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1885862005169068818}
   - component: {fileID: 6415911519548388046}
+  - component: {fileID: 2524599460353841004}
   - component: {fileID: 8972876366878724490}
   m_Layer: 0
   m_Name: Mecano
@@ -82,6 +83,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2524599460353841004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34627022653424086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b690ee8ac0483214aacd65a32e9cad2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  installingTime: 20
 --- !u!60 &8972876366878724490
 PolygonCollider2D:
   m_ObjectHideFlags: 0
