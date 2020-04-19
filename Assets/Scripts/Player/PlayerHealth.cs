@@ -41,4 +41,12 @@ public class PlayerHealth : MonoBehaviour
             life = 100f;
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "ennemyBullet")
+        {
+            TakeDmg();
+        }
+    }
 }
