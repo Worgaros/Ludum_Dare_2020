@@ -26,7 +26,7 @@ public class Bullet : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("collision");
+        //Debug.Log("collision");
         Camera.main.GetComponent<ScreenShakeBehavior>().TriggerShake(0.1f);
 
         //if (collision.gameObject.layer == LayerMask.NameToLayer("Enemi"))

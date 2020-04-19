@@ -93,7 +93,7 @@ public class EnnemiesSpawning : MonoBehaviour
 
   public void SpawnOxygen(Vector2 deathPosition)
     {
-        Debug.Log("oxygen");
+        //Debug.Log("oxygen");
         int bubbleNumber;
         bubbleNumber = Random.Range(1, 6);
 

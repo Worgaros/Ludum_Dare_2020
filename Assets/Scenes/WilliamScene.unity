@@ -2109,6 +2109,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1334346758, guid: 7b215239739a75f4a8b40ad9853864e4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 27536392177067601, guid: 7b215239739a75f4a8b40ad9853864e4,
         type: 3}
       propertyPath: maxOxygen

@@ -35,7 +35,7 @@ public class OxygenBubble : MonoBehaviour
 
     void MoveToPlayer()
     {
-        Debug.Log("move");
+        //Debug.Log("move");
         transform.position = Vector3.Lerp(transform.position, player, Time.deltaTime*speed);
     }
 

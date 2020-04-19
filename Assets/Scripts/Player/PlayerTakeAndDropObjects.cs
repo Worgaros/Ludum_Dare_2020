@@ -60,57 +60,6 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
             canPick5 = false;
     }
 
-    // void OnTriggerStay2D(Collider2D other)
-    // {
-    //     
-    //     //Pick
-    //      if (Input.GetKeyDown("e") && other.CompareTag("1") && !haveShipPart)
-    //      {
-    //          Destroy(other.gameObject);
-    //          have1 = true;
-    //          haveShipPart = true;
-    //          canDrop = false;
-    //          shooting.BlockShoot();
-    //          canPick1 = false;
-    //      }
-    //      else if (Input.GetKeyDown("e") && other.CompareTag("2") && !haveShipPart)
-    //      {
-    //          Destroy(other.gameObject);
-    //          have2 = true;
-    //          haveShipPart = true;
-    //          canDrop = false;
-    //          shooting.BlockShoot();
-    //          canPick2 = false;
-    //      }
-    //      else if (Input.GetKeyDown("e") && other.CompareTag("3") && !haveShipPart)
-    //      {
-    //          Destroy(other.gameObject);
-    //          have3 = true;
-    //          haveShipPart = true;
-    //          canDrop = false;
-    //          shooting.BlockShoot();
-    //          canPick3 = false;
-    //      }
-    //      else if (Input.GetKeyDown("e") && other.CompareTag("4") && !haveShipPart)
-    //      {
-    //          Destroy(other.gameObject);
-    //          have4 = true;
-    //          haveShipPart = true;
-    //          canDrop = false;
-    //          shooting.BlockShoot();
-    //          canPick4 = false;
-    //      }
-    //      else if (Input.GetKeyDown("e") && other.CompareTag("5") && !haveShipPart)
-    //      {
-    //          Destroy(other.gameObject);
-    //          have5 = true;
-    //          haveShipPart = true;
-    //          canDrop = false;
-    //          shooting.BlockShoot();
-    //          canPick5 = false;
-    //      }
-    // }
-
     void Update()
     {
         
@@ -124,35 +73,35 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
             have1 = false;
             haveShipPart = false;
             GameObject One = Instantiate(onePrefab, firePosition.position, firePosition.rotation);
-            shooting.UnblockShoot();
+            shooting.UnblockShootTakeParts();
         }
         else if (have2 && Input.GetKeyDown("e") && canDrop)
         {
             have2 = false;
             haveShipPart = false;
             GameObject Two = Instantiate(twoPrefab, firePosition.position, firePosition.rotation);
-            shooting.UnblockShoot();
+            shooting.UnblockShootTakeParts();
         }
         else if (have3 && Input.GetKeyDown("e") && canDrop)
         {
             have3 = false;
             haveShipPart = false;
             GameObject Three = Instantiate(threePrefab, firePosition.position, firePosition.rotation);
-            shooting.UnblockShoot();
+            shooting.UnblockShootTakeParts();
         }
         else if (have4 && Input.GetKeyDown("e") && canDrop)
         {
             have4 = false;
             haveShipPart = false;
             GameObject Four = Instantiate(fourPrefab, firePosition.position, firePosition.rotation);
-            shooting.UnblockShoot();
+            shooting.UnblockShootTakeParts();
         }
         else if (have5 && Input.GetKeyDown("e") && canDrop)
         {
             have5 = false;
             haveShipPart = false;
             GameObject Five = Instantiate(fivePrefab, firePosition.position, firePosition.rotation);
-            shooting.UnblockShoot();
+            shooting.UnblockShootTakeParts();
         }
         
         //Pick
@@ -163,7 +112,7 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
             have1 = true;
             haveShipPart = true;
             canDrop = false;
-            shooting.BlockShoot();
+            shooting.BlockShootTakeParts();
             canPick1 = false;
         }
         else if (Input.GetKeyDown("e") && canPick2)
@@ -173,7 +122,7 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
             have2 = true;
             haveShipPart = true;
             canDrop = false;
-            shooting.BlockShoot();
+            shooting.BlockShootTakeParts();
             canPick2 = false;
         }
         else if (Input.GetKeyDown("e") && canPick3)
@@ -183,7 +132,7 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
             have3 = true;
             haveShipPart = true;
             canDrop = false;
-            shooting.BlockShoot();
+            shooting.BlockShootTakeParts();
             canPick3 = false;
         }
         else if (Input.GetKeyDown("e") && canPick4)
@@ -193,7 +142,7 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
             have4 = true;
             haveShipPart = true;
             canDrop = false;
-            shooting.BlockShoot();
+            shooting.BlockShootTakeParts();
             canPick4 = false;
         }
         else if (Input.GetKeyDown("e") && canPick5)
@@ -203,20 +152,9 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
             have5 = true;
             haveShipPart = true;
             canDrop = false;
-            shooting.BlockShoot();
+            shooting.BlockShootTakeParts();
             canPick5 = false;
         }
-        
-        GameObject.FindGameObjectWithTag("player").GetComponent<Transform>();
-        
-        
-        // Debug.Log("1" + have1);
-        // Debug.Log("2" + have2);
-        // Debug.Log("3" + have3);
-        // Debug.Log("4" + have4);
-        // Debug.Log("5" + have5);
-        //
-        // Debug.Log(haveShipPart);
     }
 
     public void removeShipParts()
@@ -229,7 +167,7 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
             have4 = false;
             have5 = false;
             haveShipPart = false;
-            shooting.UnblockShoot();
+            shooting.UnblockShootTakeParts();
         }
     }
 
