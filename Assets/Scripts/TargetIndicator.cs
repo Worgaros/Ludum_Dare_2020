@@ -24,12 +24,12 @@ public class TargetIndicator : MonoBehaviour
         }
     }
 
-    public static void ActivateIndicator()
+    public void ActivateIndicator()
     {
         indicator = true;
     }
 
-    public static void DesactivateIndicator()
+    public void DesactivateIndicator()
     {
         indicator = false;
     }
