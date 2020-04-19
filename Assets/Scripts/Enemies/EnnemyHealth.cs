@@ -38,6 +38,11 @@ public class EnnemyHealth : MonoBehaviour
         }
     }
 
+    public void DestroyBecauseOutOfPlace()
+    {
+        Destroy(gameObject);
+    }
+
     void Death()
     {
         Vector2 deathPosition = new Vector2(transform.position.x, transform.position.y);

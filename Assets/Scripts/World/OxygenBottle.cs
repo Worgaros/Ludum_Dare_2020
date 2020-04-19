@@ -15,4 +15,17 @@ public class OxygenBottle : MonoBehaviour
     {
         
     }
+
+    void GiveOxygen()
+    {
+
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.CompareTag("player"))
+        {
+
+        }
+    }
 }
