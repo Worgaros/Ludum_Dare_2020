@@ -14,6 +14,8 @@ public class OxygenCable : MonoBehaviour
     [SerializeField] GameObject oxygenBottle;
 
     PlayerOxygen playerOxygen;
+
+    bool attached = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,10 +30,10 @@ public class OxygenCable : MonoBehaviour
         {
             AttachToPlayer();
         }
-        if(numberOfUse>=3)
-        {
-            Destroy(oxygenBottle);
-        }
+        //if(numberOfUse>=3)
+        //{
+        //    Destroy(oxygenBottle);
+        //}
     }
 
     void AttachToPlayer()
@@ -39,7 +41,11 @@ public class OxygenCable : MonoBehaviour
         body.velocity = (playerPosition.transform.position - transform.position).normalized * cableSpeed;
         if (Vector3.Distance(transform.position, playerPosition.transform.position) <= 2)
         {
-            numberOfUse++;
+            if (attached)
+            { 
+                numberOfUse++;
+                attached = false;
+            }
             playerOxygen.ConnectingToBottle();
         }
         if (Vector3.Distance(transform.position, playerPosition.transform.position) > 2)
@@ -54,6 +60,7 @@ public class OxygenCable : MonoBehaviour
         {
             playerOxygen = collision.gameObject.GetComponent<PlayerOxygen>();
             canAttach = true;
+            attached = true;
            // numberOfUse++;
             
         }
