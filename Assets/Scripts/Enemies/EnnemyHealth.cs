@@ -38,10 +38,10 @@ public class EnnemyHealth : MonoBehaviour
         }
     }
 
-    public void DestroyBecauseOutOfPlace()
-    {
-        Destroy(gameObject);
-    }
+    //public void DestroyBecauseOutOfPlace()
+    //{
+    //    Destroy(gameObject);
+    //}
 
     void Death()
     {

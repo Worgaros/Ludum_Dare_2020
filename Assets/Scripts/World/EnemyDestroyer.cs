@@ -20,9 +20,10 @@ public class EnemyDestroyer : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("enemy"))
         {
+            Debug.Log("destroy collision");
             EnnemyHealth ennemy;
             ennemy = collision.GetComponent<EnnemyHealth>();
-            ennemy.DestroyBecauseOutOfPlace();
+            //ennemy.DestroyBecauseOutOfPlace();
         }
     }
 }
