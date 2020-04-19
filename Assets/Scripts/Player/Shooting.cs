@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 public class Shooting : MonoBehaviour
@@ -14,6 +15,7 @@ public class Shooting : MonoBehaviour
     bool canShoot = false;
     bool shooting = false;
     bool shotBlocked = false;
+    bool shotBlockedTakeParts = false;
 
     float overHeat =0;
     [SerializeField] float maxOverheat;
@@ -82,7 +84,7 @@ public class Shooting : MonoBehaviour
                 break;
             case State.SHOOTING:
                 Shoot();
-                if (!isOverHeating)
+                if (!isOverHeating || !shotBlocked)
                 {
                     anim.SetBool("IsShooting", true);
                 }
@@ -101,7 +103,7 @@ public class Shooting : MonoBehaviour
             case State.COOLDOWN:
                 if (Input.GetButtonUp("Fire1"))
                 {
-                    Debug.Log("buttonUp");
+                    //Debug.Log("buttonUp");
                     shooting = false;
 
                     startCooling = true;
@@ -115,13 +117,12 @@ public class Shooting : MonoBehaviour
                     state = State.NOT_SHOOTING;
                 }
                 break;
-
-                
         }
 
         OverHeating();
         Cooling();
 
+        Debug.Log(shotBlocked);
 
 
         //if (Input.GetButton("Fire1"))
@@ -161,7 +162,7 @@ public class Shooting : MonoBehaviour
     {
         if (startCooling&&!startOverHeat)
         {
-            Debug.Log("cooling");
+            //Debug.Log("cooling");
             overHeat -= Time.deltaTime*2;
             if (overHeat <= 0)
             {
@@ -175,7 +176,7 @@ public class Shooting : MonoBehaviour
 
     void Shoot()
     {
-        if (!shotBlocked)
+        if (!shotBlocked && !shotBlockedTakeParts)
         {
             GameObject bullet = Instantiate(bulletPrefab, firePosition.position, firePosition.rotation);
             //
@@ -198,5 +199,14 @@ public class Shooting : MonoBehaviour
     public void UnblockShoot()
     {
         shotBlocked = false;
+    }
+    
+    public void BlockShootTakeParts()
+    {
+        shotBlockedTakeParts = true;
+    }
+    public void UnblockShootTakeParts()
+    {
+        shotBlockedTakeParts = false;
     }
 }

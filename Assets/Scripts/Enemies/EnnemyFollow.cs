@@ -30,7 +30,7 @@ public class EnnemyFollow : MonoBehaviour
         if (isFollowing&&!followMechano)
         {
             body.velocity = (player.transform.position - transform.position).normalized * speed;
-            Debug.Log("move");
+            //Debug.Log("move");
         }
         if(followMechano)
         {
