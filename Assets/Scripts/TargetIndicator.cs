@@ -15,10 +15,13 @@ public class TargetIndicator : MonoBehaviour
 
     void Update()
     {
-        var direction = target.position - transform.position;
+       if (indicator)
+        {
+            var direction = target.position - transform.position;
 
-        var angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            var angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        }
     }
 
     public static void ActivateIndicator()
