@@ -34,7 +34,7 @@ TagManager:
   - Ship Parts
   - Oxygen
   - Object
-  - 
+  - ArrowIndicator
   - 
   - 
   - 
@@ -67,4 +67,10 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 1188630209
+    locked: 0
+  - name: ArrowIndicator
+    uniqueID: 4239389939
+    locked: 0
+  - name: MiniMap
+    uniqueID: 4216109301
     locked: 0
