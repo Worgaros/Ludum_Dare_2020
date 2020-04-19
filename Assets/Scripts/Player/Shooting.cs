@@ -84,7 +84,7 @@ public class Shooting : MonoBehaviour
                 break;
             case State.SHOOTING:
                 Shoot();
-                if (!isOverHeating || !shotBlocked)
+                if (!isOverHeating && !shotBlocked && !shotBlockedTakeParts)
                 {
                     anim.SetBool("IsShooting", true);
                 }
