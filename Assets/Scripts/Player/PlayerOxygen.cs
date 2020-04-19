@@ -44,10 +44,9 @@ public class PlayerOxygen : MonoBehaviour
     {
         if (takeFromBottle)
         {
-            while (currentOxygen < maxOxygen)
-            {
-                currentOxygen += 2 * Time.deltaTime;
-            }
+           
+                currentOxygen += Time.deltaTime*4;
+            
         }
         
     }

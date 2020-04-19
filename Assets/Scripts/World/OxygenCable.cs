@@ -10,7 +10,10 @@ public class OxygenCable : MonoBehaviour
     [SerializeField] float cableSpeed = 5;
     bool canAttach = false;
     int numberOfUse = 0;
+    [SerializeField] int maxNumberOfUse = 3;
     [SerializeField] GameObject oxygenBottle;
+
+    PlayerOxygen playerOxygen;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,18 +37,25 @@ public class OxygenCable : MonoBehaviour
     void AttachToPlayer()
     {
         body.velocity = (playerPosition.transform.position - transform.position).normalized * cableSpeed;
-        //if(Vector3.Distance(transform.position,playerPosition.transform.position)>=2)
-        //{
-        //    canAttach = false;
-        //}
+        if (Vector3.Distance(transform.position, playerPosition.transform.position) <= 2)
+        {
+            numberOfUse++;
+            playerOxygen.ConnectingToBottle();
+        }
+        if (Vector3.Distance(transform.position, playerPosition.transform.position) > 2)
+        {
+            playerOxygen.DisconnectedFromBottle();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.CompareTag("player"))
         {
+            playerOxygen = collision.gameObject.GetComponent<PlayerOxygen>();
             canAttach = true;
-            numberOfUse++;
+           // numberOfUse++;
+            
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -56,25 +66,23 @@ public class OxygenCable : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.CompareTag("player"))
-        {
-            Debug.Log("collided");
-            PlayerOxygen playerOxygen;
-            playerOxygen = collision.gameObject.GetComponent<PlayerOxygen>();
-            playerOxygen.ConnectingToBottle();
-        }
-    }
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    if(collision.gameObject.CompareTag("player"))
+    //    {
+    //        Debug.Log("collided");
+    //        playerOxygen = collision.gameObject.GetComponent<PlayerOxygen>();
+    //       // playerOxygen.ConnectingToBottle();
+    //    }
+    //}
 
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("player"))
-        {
-            Debug.Log("collided");
-            PlayerOxygen playerOxygen;
-            playerOxygen = collision.gameObject.GetComponent<PlayerOxygen>();
-            playerOxygen.DisconnectedFromBottle();
-        }
-    }
+    //private void OnCollisionExit2D(Collision2D collision)
+    //{
+    //    if (collision.gameObject.CompareTag("player"))
+    //    {
+    //        Debug.Log("collided");
+    //        playerOxygen = collision.gameObject.GetComponent<PlayerOxygen>();
+    //        //playerOxygen.DisconnectedFromBottle();
+    //    }
+    //}
 }
