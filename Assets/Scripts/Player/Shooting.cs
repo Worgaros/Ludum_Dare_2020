@@ -29,6 +29,7 @@ public class Shooting : MonoBehaviour
     [SerializeField] float innaccuracy = 0.1f;
 
     Animator anim;
+    [SerializeField] Animator overheatTextAnim;
 
     // Start is called before the first frame update
     void Start()
@@ -151,6 +152,7 @@ public class Shooting : MonoBehaviour
             overHeat += Time.deltaTime;
             if(overHeat>=maxOverheat)
             {
+                overheatTextAnim.SetBool("isOverHeating", true);
                 BlockShoot();
                 overHeat = maxOverheat;
                 isOverHeating = true;
@@ -166,6 +168,7 @@ public class Shooting : MonoBehaviour
             overHeat -= Time.deltaTime*2;
             if (overHeat <= 0)
             {
+                overheatTextAnim.SetBool("isOverHeating", false);
                 UnblockShoot();
                 overHeat = 0;
                 isOverHeating = false;
