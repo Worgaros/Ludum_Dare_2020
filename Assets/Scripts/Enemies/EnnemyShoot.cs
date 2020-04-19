@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnnemyShoot : MonoBehaviour
 {
     [SerializeField] GameObject bullet;
+    [SerializeField] Transform firePosition;
 
     float fireRate;
     float nextFire;
@@ -27,7 +28,7 @@ public class EnnemyShoot : MonoBehaviour
         {
             if (Time.time > nextFire)
             {
-                Instantiate(bullet, transform.position, Quaternion.identity);
+                Instantiate(bullet, firePosition.position,firePosition.rotation);
                 nextFire = Time.time + fireRate;
             }
         }

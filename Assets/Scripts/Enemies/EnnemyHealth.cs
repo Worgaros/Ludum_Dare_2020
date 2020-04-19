@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnnemyHealth : MonoBehaviour
 {
-    float health = 100f;
+    [SerializeField]float health = 100f;
     float dmg = 10f;
 
     EnnemiesSpawning EnnemiesSpawning;

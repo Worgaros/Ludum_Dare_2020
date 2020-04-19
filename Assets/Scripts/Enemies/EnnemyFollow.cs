@@ -27,6 +27,13 @@ public class EnnemyFollow : MonoBehaviour
         mechano = FindObjectOfType<PNJTakeShipParts>();
     }
 
+    private void FixedUpdate()
+    {
+        Vector2 lookDirection = player.position - transform.position;
+        float angle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg-90;
+        body.rotation = angle;
+    }
+
     void Update()
     {
 
