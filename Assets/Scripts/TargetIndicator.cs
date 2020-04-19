@@ -27,6 +27,6 @@ public class TargetIndicator : MonoBehaviour
 
     public void DesactivateIndicator()
     {
-        indicator.SetActive(true);
+        indicator.SetActive(false);
     }
 }
