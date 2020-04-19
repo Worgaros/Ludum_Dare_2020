@@ -18,7 +18,7 @@ public class PlayerHealth : MonoBehaviour
     }
     private void Update()
     {
-       // healthText.text = life.ToString("F0");
+       healthText.text = life.ToString("F0");
     }
 
     public static void TakeDmg()
