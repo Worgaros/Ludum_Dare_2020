@@ -33,6 +33,7 @@ public class EnnemyBullet : MonoBehaviour
         {
             body.velocity = (mechano.gameObject.transform.position - transform.position).normalized * speed;
         }
+        Destroy(gameObject, 5f); ;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
