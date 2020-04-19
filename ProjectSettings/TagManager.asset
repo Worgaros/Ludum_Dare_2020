@@ -20,7 +20,7 @@ TagManager:
   - enemy
   - ship
   - shootingEnnemy
-  - runninEnnemy
+  - runningEnnemy
   layers:
   - Default
   - TransparentFX
