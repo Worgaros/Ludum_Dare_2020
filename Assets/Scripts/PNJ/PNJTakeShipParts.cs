@@ -31,7 +31,6 @@ public class PNJTakeShipParts : MonoBehaviour
     {
         if (other.CompareTag("player"))
         {
-            Debug.Log("ici");
             canGiveShipParts = true;
             playerTakeAndDropObjects.blockDrop();
         }
@@ -49,7 +48,7 @@ public class PNJTakeShipParts : MonoBehaviour
     {
         repairBar.setRepairTime(installingTimer, maxInstallingTime);
 
-        if (Input.GetKeyDown("e") && canGiveShipParts)
+        if (Input.GetKeyDown("e") && canGiveShipParts && playerTakeAndDropObjects.ReturnIfHaveAPart())
         {
            
             playerTakeAndDropObjects.removeShipParts();
