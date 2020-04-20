@@ -11,7 +11,7 @@ public class TargetIndicator : MonoBehaviour
 
     private void Start()
     {
-        indicator.SetActive(false);
+        //indicator.SetActive(false);
         textIndicator.SetActive(false);
     }
 
