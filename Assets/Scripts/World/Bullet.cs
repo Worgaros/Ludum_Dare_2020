@@ -27,6 +27,7 @@ public class Bullet : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        explosionSound.Play();
         //Debug.Log("collision");
         Camera.main.GetComponent<ScreenShakeBehavior>().TriggerShake(0.1f);
 
