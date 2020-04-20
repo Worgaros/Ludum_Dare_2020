@@ -13,6 +13,8 @@ public class EnnemyShoot : MonoBehaviour
     float nextFire;
 
     bool isShooting = false;
+
+    [SerializeField] AudioSource blaster;
     private void Start()
     {
         fireRate = 1f;
@@ -33,6 +35,7 @@ public class EnnemyShoot : MonoBehaviour
             {
                 anim.SetTrigger("shoot");
                 Instantiate(bullet, firePosition.position,firePosition.rotation);
+                blaster.Play();
                 nextFire = Time.time + fireRate;
             }
         }

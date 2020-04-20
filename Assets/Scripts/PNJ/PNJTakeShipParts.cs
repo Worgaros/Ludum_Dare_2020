@@ -20,6 +20,8 @@ public class PNJTakeShipParts : MonoBehaviour
    [SerializeField] RepairationBar repairBar;
     [SerializeField] float maxInstallingTime = 20;
 
+    [SerializeField] AudioSource repair;
+
     void Start()
     {
         playerTakeAndDropObjects = FindObjectOfType<PlayerTakeAndDropObjects>();
@@ -54,6 +56,7 @@ public class PNJTakeShipParts : MonoBehaviour
             playerTakeAndDropObjects.removeShipParts();
             shipPartsGived++;
             isTheTarget = true;
+            repair.Play();
             anim.transform.Rotate(0, 180, 0);
             canGiveShipParts = false;
             playerTakeAndDropObjects.StopTakeAnim();
@@ -70,6 +73,7 @@ public class PNJTakeShipParts : MonoBehaviour
                 isTheTarget = false;
                anim.transform.Rotate(0, 180, 0);
                 anim.SetBool("StopRepairing", false);
+               repair.Stop();
                 CheckWin.ShipRepair();
             }
         }

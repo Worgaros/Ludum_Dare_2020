@@ -13,6 +13,8 @@ public class EnnemyHealth : MonoBehaviour
     Animator runningEnnemyAnim;
 
     [SerializeField]  GameObject deathPrefab;
+
+    
    
     private void Start()
     {
