@@ -1993,9 +1993,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: spaceship
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b0a30ba8393a13940bceb9516f54afb3, type: 2}
-  m_sharedMaterial: {fileID: 5743686464812457851, guid: b0a30ba8393a13940bceb9516f54afb3,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3073,9 +3072,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Gun overheating !
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b0a30ba8393a13940bceb9516f54afb3, type: 2}
-  m_sharedMaterial: {fileID: 5743686464812457851, guid: b0a30ba8393a13940bceb9516f54afb3,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3417,9 +3415,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: mechanic
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b0a30ba8393a13940bceb9516f54afb3, type: 2}
-  m_sharedMaterial: {fileID: 5743686464812457851, guid: b0a30ba8393a13940bceb9516f54afb3,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4845,9 +4842,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: to repair
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b0a30ba8393a13940bceb9516f54afb3, type: 2}
-  m_sharedMaterial: {fileID: 5743686464812457851, guid: b0a30ba8393a13940bceb9516f54afb3,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5703,7 +5699,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1452366110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5724,9 +5720,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: ship part
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b0a30ba8393a13940bceb9516f54afb3, type: 2}
-  m_sharedMaterial: {fileID: 5743686464812457851, guid: b0a30ba8393a13940bceb9516f54afb3,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6321,9 +6316,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: to the
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b0a30ba8393a13940bceb9516f54afb3, type: 2}
-  m_sharedMaterial: {fileID: 5743686464812457851, guid: b0a30ba8393a13940bceb9516f54afb3,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6477,9 +6471,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\rBring the "
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b0a30ba8393a13940bceb9516f54afb3, type: 2}
-  m_sharedMaterial: {fileID: 5743686464812457851, guid: b0a30ba8393a13940bceb9516f54afb3,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

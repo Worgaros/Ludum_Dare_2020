@@ -38,10 +38,12 @@ public class TargetIndicator : MonoBehaviour
     public void StartProtection()
     {
         textProtect.SetActive(true);
+        textIndicator.SetActive(false);
     }
 
     public void StopProtection()
     {
         textProtect.SetActive(false);
+        indicator.SetActive(false);
     }
 }
