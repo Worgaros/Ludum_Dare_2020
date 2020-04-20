@@ -21,7 +21,7 @@ public class PlayerHealth : MonoBehaviour
        healthText.text = life.ToString("F0");
     }
 
-    public static void TakeDmg()
+    public void TakeDmg()
     {
         life -= dmg;
         
@@ -32,7 +32,7 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    public static void TakeHealth()
+    public void TakeHealth()
     {
         life += health;
        

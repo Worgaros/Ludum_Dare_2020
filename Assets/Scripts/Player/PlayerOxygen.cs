@@ -7,6 +7,8 @@ public class PlayerOxygen : MonoBehaviour
     [SerializeField] float maxOxygen = 50;
     float currentOxygen;
 
+    PlayerHealth playerHealth;
+
     OxygenDisplay oxygen;
 
     bool takeFromBottle = false;
@@ -15,17 +17,18 @@ public class PlayerOxygen : MonoBehaviour
     {
         oxygen = FindObjectOfType<OxygenDisplay>();
         currentOxygen = maxOxygen;
+        playerHealth = GetComponent<PlayerHealth>();
     }
 
     void Update()
     {
         if ( currentOxygen <= 0)
         {
-            PlayerHealth.TakeDmg();
+            playerHealth.TakeDmg();
         }
         else
         {
-            PlayerHealth.TakeHealth();
+            playerHealth.TakeHealth();
         }
         
         currentOxygen -= Time.deltaTime;
