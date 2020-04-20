@@ -11,7 +11,7 @@ public class PlayerHealth : MonoBehaviour
     static float bulletDmg = 5f;
     
     [SerializeField] private TextMeshProUGUI healthText;
-    [SerializeField] private GameObject gameOverPanel;
+    [SerializeField] static private GameObject gameOverPanel;
 
     private void Start()
     {
@@ -25,7 +25,7 @@ public class PlayerHealth : MonoBehaviour
         if (life <= 0f)
         {
             life = 0f;
-            gameOverPanel.SetActive(true);
+            GameOver();
         }
     }
 
@@ -47,6 +47,11 @@ public class PlayerHealth : MonoBehaviour
         {
             life = 100f;
         }
+    }
+
+    public static void GameOver()
+    {
+        gameOverPanel.SetActive(true);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
