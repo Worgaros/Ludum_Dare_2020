@@ -21,6 +21,7 @@ TagManager:
   - ship
   - shootingEnnemy
   - runningEnnemy
+  - ennemyBullet
   layers:
   - Default
   - TransparentFX
