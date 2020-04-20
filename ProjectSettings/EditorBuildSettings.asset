@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 4612e1fcfcda3e24ca0ed74aac75fb98
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 80b40dd51a4220747b5162f2327a534b
+  - enabled: 1
     path: Assets/Scenes/MarvinScene.unity
     guid: 2fa0a8162c09f9d43a49a0a2a11b02e7
   m_configObjects: {}
