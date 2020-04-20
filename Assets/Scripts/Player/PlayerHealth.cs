@@ -6,7 +6,7 @@ using TMPro;
 public class PlayerHealth : MonoBehaviour
 {
     static float life = 100f;
-    static float dmg = 0.01f;
+    static float dmg = 5f;
     static float health = 10f;
     static float bulletDmg = 5f;
     
@@ -33,6 +33,7 @@ public class PlayerHealth : MonoBehaviour
     {
         Debug.Log("tookDamage");
         life -= dmg;
+        Debug.Log(life);
     }
 
     void BulletDmg()

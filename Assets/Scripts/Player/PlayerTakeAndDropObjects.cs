@@ -209,5 +209,10 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
         anim.SetBool("holdingCle", false);
         anim.SetBool("holdingPlaque", false);
     }
+
+    public bool ReturnIfHaveAPart()
+    {
+        return haveShipPart;
+    }
 }
 
