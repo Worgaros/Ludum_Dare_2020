@@ -26,10 +26,6 @@ public class PlayerOxygen : MonoBehaviour
         {
             playerHealth.TakeDmg();
         }
-        else
-        {
-            playerHealth.TakeHealth();
-        }
         
         currentOxygen -= Time.deltaTime;
        // Debug.Log("oxygen" + currentOxygen);
