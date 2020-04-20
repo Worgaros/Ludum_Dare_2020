@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
-  deathPrefab: {fileID: 6778315025094816762, guid: 135b194156790044f82bc84a1e46134e,
+  deathPrefab: {fileID: 1902206690419708632, guid: 43c4b769718edc14e89f78672b2f6fd5,
     type: 3}
 --- !u!50 &4055771179338086870
 Rigidbody2D:

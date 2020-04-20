@@ -71,7 +71,7 @@ public class PNJTakeShipParts : MonoBehaviour
                 isTheTarget = false;
                anim.transform.Rotate(0, 180, 0);
                 anim.SetBool("StopRepairing", false);
-                
+                CheckWin.ShipRepair();
             }
         }
         
