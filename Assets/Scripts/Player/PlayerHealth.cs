@@ -42,7 +42,7 @@ public class PlayerHealth : MonoBehaviour
         life -= bulletDmg;
     }
 
-    void OxyDmg()
+    public void OxyDmg()
     {
         life -= oxygenDmg;
     }
