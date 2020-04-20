@@ -10,9 +10,10 @@ public class PlayerHealth : MonoBehaviour
     static float oxygenDmg = 0.1f;
     static float health = 10f;
     static float bulletDmg = 2f;
-    
+
+    [SerializeField] private GameObject gameOverPanel;
     [SerializeField] private TextMeshProUGUI healthText;
-    [SerializeField] static private GameObject gameOverPanel;
+    
 
     private void Start()
     {
@@ -56,7 +57,7 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    public static void GameOver()
+    public void GameOver()
     {
         gameOverPanel.SetActive(true);
     }

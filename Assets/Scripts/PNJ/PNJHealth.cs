@@ -9,6 +9,7 @@ public class PNJHealth : MonoBehaviour
     static float health = 100f;
 
     [SerializeField] private TextMeshProUGUI healthText;
+    [SerializeField] GameObject gameOverPanel;
 
     private void Start()
     {
