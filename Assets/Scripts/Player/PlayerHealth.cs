@@ -6,9 +6,10 @@ using TMPro;
 public class PlayerHealth : MonoBehaviour
 {
     static float life = 100f;
-    static float dmg = 5f;
+    static float dmg = 2f;
+    static float oxygenDmg = 0.1f;
     static float health = 10f;
-    static float bulletDmg = 5f;
+    static float bulletDmg = 2f;
     
     [SerializeField] private TextMeshProUGUI healthText;
     [SerializeField] static private GameObject gameOverPanel;
@@ -39,6 +40,11 @@ public class PlayerHealth : MonoBehaviour
     void BulletDmg()
     {
         life -= bulletDmg;
+    }
+
+    void OxyDmg()
+    {
+        life -= oxygenDmg;
     }
     public void TakeHealth()
     {

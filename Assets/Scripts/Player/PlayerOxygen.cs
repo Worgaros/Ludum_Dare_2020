@@ -24,7 +24,7 @@ public class PlayerOxygen : MonoBehaviour
     {
         if ( currentOxygen <= 0)
         {
-            playerHealth.TakeDmg();
+            playerHealth.OxyDmg();
         }
         
         currentOxygen -= Time.deltaTime*0.8f;
