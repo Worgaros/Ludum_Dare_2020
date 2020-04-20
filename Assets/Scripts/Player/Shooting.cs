@@ -70,11 +70,11 @@ public class Shooting : MonoBehaviour
                 if(Input.GetButtonUp("Fire1"))
                 {
                     //Debug.Log("buttonUp");
-                    //shooting = false;
+                    shooting = false;
                    
-                    //startCooling = true;
-                    //startOverHeat = false;
-                    // Cooling();
+                    startCooling = true;
+                    startOverHeat = false;
+                    Cooling();
                 }
 
                 if(shooting)
