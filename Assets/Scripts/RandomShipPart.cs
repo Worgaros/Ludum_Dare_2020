@@ -16,6 +16,8 @@ public class RandomShipPart : MonoBehaviour
     private void Start()
     {
         transform.position = initialPoint.transform.position;
+        transform.position = new Vector3(transform.position.x, transform.position.y, 0);
+
     }
     private void Update()
     {
@@ -35,18 +37,25 @@ public class RandomShipPart : MonoBehaviour
         if (randomNmb == 1)
         {
             transform.position = spawn1.transform.position;
+            transform.position = new Vector3(transform.position.x, transform.position.y, 0);
         }
         if (randomNmb == 2)
         {
             transform.position = spawn2.transform.position;
+            transform.position = new Vector3(transform.position.x, transform.position.y, 0);
+
         }
         if (randomNmb == 3)
         {
             transform.position = spawn3.transform.position;
+            transform.position = new Vector3(transform.position.x, transform.position.y, 0);
+
         }
         if (randomNmb == 4)
         {
             transform.position = spawn4.transform.position;
+            transform.position = new Vector3(transform.position.x, transform.position.y, 0);
+
         }
 
     }

@@ -35,7 +35,7 @@ public class PlayerHealth : MonoBehaviour
         life -= dmg;
     }
 
-    public void BulletDmg()
+    void BulletDmg()
     {
         life -= bulletDmg;
     }
