@@ -23,6 +23,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDmg()
     {
+        Debug.Log("tookDamage");
         life -= dmg;
         
         if (life <= 0f)

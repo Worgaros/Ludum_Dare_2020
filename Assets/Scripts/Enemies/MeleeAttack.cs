@@ -9,9 +9,12 @@ public class MeleeAttack : MonoBehaviour
 
     bool canMakeDmg = false;
 
+    Animator anim;
+
     void Start()
     {
-        playerHealth = GetComponent<PlayerHealth>();
+        playerHealth = FindObjectOfType<PlayerHealth>();
+        anim = GetComponent<Animator>();
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -19,7 +22,7 @@ public class MeleeAttack : MonoBehaviour
         if (other.CompareTag("player"))
         {
             canMakeDmg = true;
-            //lance anim
+            anim.SetBool("hitting", true);
         }
     }
 
@@ -28,6 +31,7 @@ public class MeleeAttack : MonoBehaviour
         if (other.CompareTag("player"))
         {
             canMakeDmg = false;
+            anim.SetBool("hitting", false);
         }
     }
 
