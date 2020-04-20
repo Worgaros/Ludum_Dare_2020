@@ -92,7 +92,7 @@ public class Shooting : MonoBehaviour
                 state = State.COOLDOWN;
                 if (Input.GetButtonUp("Fire1"))
                 {
-                    Debug.Log("buttonUp");
+                    //Debug.Log("buttonUp");
                     shooting = false;
 
                     startCooling = true;
@@ -123,7 +123,7 @@ public class Shooting : MonoBehaviour
         OverHeating();
         Cooling();
 
-        Debug.Log(shotBlocked);
+        //Debug.Log(shotBlocked);
 
 
         //if (Input.GetButton("Fire1"))
