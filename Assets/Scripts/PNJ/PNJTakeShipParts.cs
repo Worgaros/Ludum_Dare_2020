@@ -15,9 +15,16 @@ public class PNJTakeShipParts : MonoBehaviour
 
     bool isTheTarget = false;
 
+    Animator anim;
+
+   [SerializeField] RepairationBar repairBar;
+    [SerializeField] float maxInstallingTime = 20;
+
     void Start()
     {
         playerTakeAndDropObjects = FindObjectOfType<PlayerTakeAndDropObjects>();
+        anim = GetComponent<Animator>();
+        installingTimer = 0;
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -40,21 +47,30 @@ public class PNJTakeShipParts : MonoBehaviour
 
     void Update()
     {
+        repairBar.setRepairTime(installingTimer, maxInstallingTime);
+
         if (Input.GetKeyDown("e") && canGiveShipParts)
         {
-            installingTimer = installingTime;
+           
             playerTakeAndDropObjects.removeShipParts();
             shipPartsGived++;
             isTheTarget = true;
+            anim.transform.Rotate(0, 180, 0);
             canGiveShipParts = false;
         }
 
         if(isTheTarget)
         {
-            installingTimer -= Time.deltaTime;
-            if(installingTimer<=0)
+            installingTimer += Time.deltaTime;
+            Debug.Log(installingTimer);
+            anim.SetBool("StopRepairing", true);
+            if (installingTimer>=maxInstallingTime)
             {
+                installingTimer = 0;
                 isTheTarget = false;
+               anim.transform.Rotate(0, 180, 0);
+                anim.SetBool("StopRepairing", false);
+                
             }
         }
         
@@ -67,6 +83,16 @@ public class PNJTakeShipParts : MonoBehaviour
     public bool TellIfTarget()
     {
         return isTheTarget;
+    }
+
+    void ActivateRepairAnim()
+    {
+        anim.SetBool("StartRepairing", true);
+    }
+
+    void DisableRepairAnim()
+    {
+        anim.SetBool("StartRepairing", false);
     }
 
 }
