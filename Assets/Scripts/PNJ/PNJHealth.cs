@@ -22,7 +22,6 @@ public class PNJHealth : MonoBehaviour
         if (health <= 0f)
         {
             health = 0f;
-            PlayerHealth.GameOver();
         }
     }
 

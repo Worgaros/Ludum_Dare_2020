@@ -14,6 +14,8 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private GameObject gameOverPanel;
     [SerializeField] private TextMeshProUGUI healthText;
     
+    [SerializeField] private TextMeshProUGUI healthText;
+    [SerializeField] private GameObject gameOverPanel;
 
     private void Start()
     {
