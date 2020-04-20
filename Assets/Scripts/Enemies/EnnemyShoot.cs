@@ -8,6 +8,8 @@ public class EnnemyShoot : MonoBehaviour
     [SerializeField] Transform firePosition;
 
     [SerializeField]float fireRate;
+
+    Animator anim;
     float nextFire;
 
     bool isShooting = false;
@@ -15,6 +17,7 @@ public class EnnemyShoot : MonoBehaviour
     {
         fireRate = 1f;
         nextFire = Time.time;
+        anim = GetComponent<Animator>();
     }
 
     private void Update()
@@ -28,6 +31,7 @@ public class EnnemyShoot : MonoBehaviour
         {
             if (Time.time > nextFire)
             {
+                anim.SetTrigger("shoot");
                 Instantiate(bullet, firePosition.position,firePosition.rotation);
                 nextFire = Time.time + fireRate;
             }

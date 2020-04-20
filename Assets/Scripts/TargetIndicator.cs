@@ -6,10 +6,12 @@ public class TargetIndicator : MonoBehaviour
 {
     [SerializeField] Transform target;
     [SerializeField] GameObject indicator;
+    [SerializeField] GameObject textIndicator;
 
     private void Start()
     {
         indicator.SetActive(false);
+        textIndicator.SetActive(false);
     }
 
     void Update()
@@ -23,10 +25,12 @@ public class TargetIndicator : MonoBehaviour
     public void ActivateIndicator()
     { 
         indicator.SetActive(true);
+        textIndicator.SetActive(true);
     }
 
     public void DesactivateIndicator()
     {
         indicator.SetActive(false);
+        textIndicator.SetActive(false);
     }
 }
