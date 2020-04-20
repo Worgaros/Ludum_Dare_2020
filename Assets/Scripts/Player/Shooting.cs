@@ -33,6 +33,8 @@ public class Shooting : MonoBehaviour
 
     [SerializeField] AudioSource blaster;
 
+    bool onPause = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -52,13 +54,21 @@ public class Shooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Time.timeScale==0)
+        {
+            onPause = true;
+        }
+        if(Time.timeScale !=0)
+        {
+            onPause = false;
+        }
       //  Debug.Log("overHeat"+overHeat);
         switch(state)
         {
             case State.NOT_SHOOTING:
                 anim.SetBool("IsShooting", false);
                 bulletTimer = bulletTime;
-                if(Input.GetButtonDown("Fire1"))
+                if(Input.GetButtonDown("Fire1")&&!onPause)
                 {
                     shooting = true;
                     if (!isOverHeating)
