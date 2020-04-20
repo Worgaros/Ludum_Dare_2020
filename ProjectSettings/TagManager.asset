@@ -76,3 +76,6 @@ TagManager:
   - name: MiniMap
     uniqueID: 4216109301
     locked: 0
+  - name: Walls
+    uniqueID: 205849709
+    locked: 0

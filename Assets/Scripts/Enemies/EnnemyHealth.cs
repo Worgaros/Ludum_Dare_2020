@@ -12,8 +12,12 @@ public class EnnemyHealth : MonoBehaviour
     Animator shootingEnnemyAnim;
     Animator runningEnnemyAnim;
 
+    [SerializeField]  GameObject deathPrefab;
+   
     private void Start()
     {
+        
+
         EnnemiesSpawning = FindObjectOfType<EnnemiesSpawning>();
         if(gameObject.CompareTag("shootingEnnemy"))
         {
@@ -60,6 +64,8 @@ public class EnnemyHealth : MonoBehaviour
         Vector2 deathPosition = new Vector2(transform.position.x, transform.position.y);
         EnnemiesSpawning.SpawnOxygen(deathPosition);
         Score.GetEnnemyPoint();
+        //shootingEnnemyAnim.SetBool("isDead", true);
+        Instantiate(deathPrefab, transform.position, transform.rotation);
         Destroy(gameObject);
     }
 }
