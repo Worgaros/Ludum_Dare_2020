@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   indicator: {fileID: 389440076}
+  textIndicator: {fileID: 0}
 --- !u!1 &383413830
 GameObject:
   m_ObjectHideFlags: 0
@@ -636,10 +637,10 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.64, y: 0.03}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.21456075, y: 0.48329148}
     oldSize: {x: 2.2744443, y: 1.4444444}
     newSize: {x: 2.2744443, y: 1.4444444}
     adaptiveTilingThreshold: 0.5
