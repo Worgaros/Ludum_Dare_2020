@@ -266,7 +266,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cedd20f2d130f9469459bda17c2405b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
+  health: 30
   deathPrefab: {fileID: 6778315025094816762, guid: 135b194156790044f82bc84a1e46134e,
     type: 3}
 --- !u!114 &6858048132573236542
@@ -283,7 +283,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 1789338562973087112, guid: bee9327fa48d11b438780c1729e826ae, type: 3}
   firePosition: {fileID: 578779055}
-  fireRate: 2
+  fireRate: 4
 --- !u!95 &9204448715166903409
 Animator:
   serializedVersion: 3
