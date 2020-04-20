@@ -81,7 +81,6 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
             shooting.UnblockShootTakeParts();
             targetIndicator.DesactivateIndicator();
             anim.SetBool("holdingEngrenage", false);
-            Debug.Log(anim.GetBool("holdingEngrenage"));
         }
         else if (have2 && Input.GetKeyDown("e") && canDrop)
         {
@@ -200,6 +199,15 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
     public void blockDrop()
     {
         canDrop = false;
+    }
+
+    public void StopTakeAnim()
+    {
+        anim.SetBool("holdingEngrenage", false);
+        anim.SetBool("holdingEcrou", false);
+        anim.SetBool("holdingMarteau", false);
+        anim.SetBool("holdingCle", false);
+        anim.SetBool("holdingPlaque", false);
     }
 }
 

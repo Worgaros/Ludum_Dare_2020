@@ -57,6 +57,7 @@ public class PNJTakeShipParts : MonoBehaviour
             isTheTarget = true;
             anim.transform.Rotate(0, 180, 0);
             canGiveShipParts = false;
+            playerTakeAndDropObjects.StopTakeAnim();
         }
 
         if(isTheTarget)
