@@ -34,16 +34,4 @@ public class TargetIndicator : MonoBehaviour
         indicator.SetActive(false);
         textIndicator.SetActive(false);
     }
-
-    public void StartProtection()
-    {
-        textProtect.SetActive(true);
-        indicator.SetActive(false);
-    }
-
-    public void StopProtection()
-    {
-        textProtect.SetActive(false);
-        indicator.SetActive(false);
-    }
 }

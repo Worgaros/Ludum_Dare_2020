@@ -37,14 +37,14 @@ public class EnnemyFollow : MonoBehaviour
             Vector2 lookDirection = player.position - transform.position;
             float angle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg - 90;
             body.rotation = angle;
-            targetIndicator.StartProtection();
+            targetIndicator.StopProtection();
         }
         if(followMechano)
         {
             Vector2 lookDirection = mechanoTransform.position - transform.position;
             float angle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg - 90;
             body.rotation = angle;
-            targetIndicator.StopProtection();
+            targetIndicator.StartProtection();
         }
 
     }
