@@ -31,6 +31,8 @@ public class Shooting : MonoBehaviour
     Animator anim;
     [SerializeField] Animator overheatTextAnim;
 
+    [SerializeField] AudioSource blaster;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -191,6 +193,7 @@ public class Shooting : MonoBehaviour
             //
             Rigidbody2D bulletBody = bullet.GetComponent<Rigidbody2D>();
             bulletBody.AddForce(firePosition.up * bulletForce, ForceMode2D.Impulse);
+            blaster.Play();
             
         }
     }
