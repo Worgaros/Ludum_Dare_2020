@@ -1252,6 +1252,174 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 170529573}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &194670751
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 194670752}
+  - component: {fileID: 194670754}
+  - component: {fileID: 194670753}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &194670752
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194670751}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1045159696}
+  m_Father: {fileID: 1960017128}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 58.000015, y: 138}
+  m_SizeDelta: {x: 1200.998, y: 395.36542}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &194670753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194670751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 'Your spaceship crashed on a dangerous planet !
+
+
+    Collect the ship
+    parts scattered around the map and bring them to your mechanician to repair your
+    ship and leave this place !
+
+
+    Don''t run out of oxygen, survive and keep
+    the mechanic alive while he repair the ship and you will escape.
+
+'
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: b0a30ba8393a13940bceb9516f54afb3, type: 2}
+  m_sharedMaterial: {fileID: 5743686464812457851, guid: b0a30ba8393a13940bceb9516f54afb3,
+    type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278190082
+  m_fontColor: {r: 0.009433985, g: 0.00035599916, b: 0.00035599916, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_outlineColor:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_fontSize: 30
+  m_fontSizeBase: 30
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_textAlignment: 258
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_firstOverflowCharacterIndex: -1
+  m_linkedTextComponent: {fileID: 0}
+  m_isLinkedTextComponent: 0
+  m_isTextTruncated: 0
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_ignoreRectMaskCulling: 0
+  m_ignoreCulling: 1
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_VertexBufferAutoSizeReduction: 1
+  m_firstVisibleCharacter: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_textInfo:
+    textComponent: {fileID: 194670753}
+    characterCount: 282
+    spriteCount: 0
+    spaceCount: 53
+    wordCount: 49
+    linkCount: 0
+    lineCount: 9
+    pageCount: 1
+    materialCount: 2
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_spriteAnimator: {fileID: 0}
+  m_hasFontAssetChanged: 0
+  m_subTextObjects:
+  - {fileID: 0}
+  - {fileID: 1045159697}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &194670754
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194670751}
+  m_CullTransparentMesh: 0
 --- !u!1 &232029788
 GameObject:
   m_ObjectHideFlags: 0
@@ -1311,7 +1479,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Protect
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8456c9075ef196541afc638f7673e044, type: 2}
+  m_fontAsset: {fileID: 0}
   m_sharedMaterial: {fileID: 5743686464812457851, guid: 8456c9075ef196541afc638f7673e044,
     type: 2}
   m_fontSharedMaterials: []
@@ -3410,7 +3578,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: the
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8456c9075ef196541afc638f7673e044, type: 2}
+  m_fontAsset: {fileID: 0}
   m_sharedMaterial: {fileID: 5743686464812457851, guid: 8456c9075ef196541afc638f7673e044,
     type: 2}
   m_fontSharedMaterials: []
@@ -6711,7 +6879,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: mechanic
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8456c9075ef196541afc638f7673e044, type: 2}
+  m_fontAsset: {fileID: 0}
   m_sharedMaterial: {fileID: 5743686464812457851, guid: 8456c9075ef196541afc638f7673e044,
     type: 2}
   m_fontSharedMaterials: []
@@ -7282,7 +7450,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: mechanic
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8456c9075ef196541afc638f7673e044, type: 2}
+  m_fontAsset: {fileID: 0}
   m_sharedMaterial: {fileID: 5743686464812457851, guid: 8456c9075ef196541afc638f7673e044,
     type: 2}
   m_fontSharedMaterials: []
@@ -7380,6 +7548,78 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1030036079}
+  m_CullTransparentMesh: 0
+--- !u!1 &1045159695
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1045159696}
+  - component: {fileID: 1045159698}
+  - component: {fileID: 1045159697}
+  m_Layer: 5
+  m_Name: TMP SubMeshUI [SPACEBAR SDF Material + LiberationSans SDF Atlas]
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1045159696
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1045159695}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 194670752}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1045159697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1045159695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_spriteAsset: {fileID: 0}
+  m_material: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
+  m_isDefaultMaterial: 0
+  m_padding: 5.8939996
+  m_canvasRenderer: {fileID: 1045159698}
+  m_TextComponent: {fileID: 194670753}
+  m_materialReferenceIndex: 1
+--- !u!222 &1045159698
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1045159695}
   m_CullTransparentMesh: 0
 --- !u!1 &1057187962
 GameObject:
@@ -9338,7 +9578,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: to repair the spaceship
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8456c9075ef196541afc638f7673e044, type: 2}
+  m_fontAsset: {fileID: 0}
   m_sharedMaterial: {fileID: 5743686464812457851, guid: 8456c9075ef196541afc638f7673e044,
     type: 2}
   m_fontSharedMaterials: []
@@ -10780,7 +11020,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: ship part
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8456c9075ef196541afc638f7673e044, type: 2}
+  m_fontAsset: {fileID: 0}
   m_sharedMaterial: {fileID: 5743686464812457851, guid: 8456c9075ef196541afc638f7673e044,
     type: 2}
   m_fontSharedMaterials: []
@@ -12836,7 +13076,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: to the
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8456c9075ef196541afc638f7673e044, type: 2}
+  m_fontAsset: {fileID: 0}
   m_sharedMaterial: {fileID: 5743686464812457851, guid: 8456c9075ef196541afc638f7673e044,
     type: 2}
   m_fontSharedMaterials: []
@@ -13761,7 +14001,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\rBring the "
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8456c9075ef196541afc638f7673e044, type: 2}
+  m_fontAsset: {fileID: 0}
   m_sharedMaterial: {fileID: 5743686464812457851, guid: 8456c9075ef196541afc638f7673e044,
     type: 2}
   m_fontSharedMaterials: []
@@ -14729,7 +14969,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1960017128
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14743,6 +14983,7 @@ RectTransform:
   m_Children:
   - {fileID: 1955202700}
   - {fileID: 1875732988}
+  - {fileID: 194670752}
   m_Father: {fileID: 1095187998}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
