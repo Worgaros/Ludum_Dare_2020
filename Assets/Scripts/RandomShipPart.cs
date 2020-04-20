@@ -13,8 +13,13 @@ public class RandomShipPart : MonoBehaviour
     [SerializeField] Transform spawn3;
     [SerializeField] Transform spawn4;
 
+    private void Start()
+    {
+        transform.position = initialPoint.transform.position;
+    }
     private void Update()
     {
+
         if (start)
         {
             ShipPart();
