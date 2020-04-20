@@ -7,6 +7,7 @@ public class Bullet : MonoBehaviour
     PolygonCollider2D bulletCollider;
     [SerializeField] GameObject explosion;
     ScreenShakeBehavior screenShake;
+    [SerializeField] AudioSource explosionSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +35,7 @@ public class Bullet : MonoBehaviour
         //    Camera.main.GetComponent<ScreenShakeBehavior>().TriggerShake(0.1f);
         //}
         GameObject effect = Instantiate(explosion, transform.position, Quaternion.identity);
+        explosionSound.Play();
         Destroy(effect, 0.5f);
         Destroy(gameObject);
     }
