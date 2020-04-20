@@ -19,12 +19,15 @@ public class EnnemyFollow : MonoBehaviour
     bool destroy = false;
     float checkRadius = 0.1f;
 
+    TargetIndicator targetIndicator;
+
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
         player = FindObjectOfType<PlayerController>().transform;
         mechanoTransform = FindObjectOfType<PNJTakeShipParts>().transform;
         mechano = FindObjectOfType<PNJTakeShipParts>();
+        targetIndicator = FindObjectOfType<TargetIndicator>();
     }
 
     private void FixedUpdate()
@@ -34,12 +37,14 @@ public class EnnemyFollow : MonoBehaviour
             Vector2 lookDirection = player.position - transform.position;
             float angle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg - 90;
             body.rotation = angle;
+            targetIndicator.StartProtection();
         }
         if(followMechano)
         {
             Vector2 lookDirection = mechanoTransform.position - transform.position;
             float angle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg - 90;
             body.rotation = angle;
+            targetIndicator.StopProtection();
         }
 
     }

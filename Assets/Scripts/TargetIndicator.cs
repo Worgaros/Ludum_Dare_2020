@@ -7,6 +7,7 @@ public class TargetIndicator : MonoBehaviour
     [SerializeField] Transform target;
     [SerializeField] GameObject indicator;
     [SerializeField] GameObject textIndicator;
+    [SerializeField] GameObject textProtect;
 
     private void Start()
     {
@@ -23,7 +24,7 @@ public class TargetIndicator : MonoBehaviour
     }
 
     public void ActivateIndicator()
-    { 
+    {
         indicator.SetActive(true);
         textIndicator.SetActive(true);
     }
@@ -32,5 +33,15 @@ public class TargetIndicator : MonoBehaviour
     {
         indicator.SetActive(false);
         textIndicator.SetActive(false);
+    }
+
+    public void StartProtection()
+    {
+        textProtect.SetActive(true);
+    }
+
+    public void StopProtection()
+    {
+        textProtect.SetActive(false);
     }
 }
