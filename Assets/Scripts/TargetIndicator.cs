@@ -25,13 +25,13 @@ public class TargetIndicator : MonoBehaviour
 
     public void ActivateIndicator()
     {
-        indicator.SetActive(true);
+        //indicator.SetActive(true);
         textIndicator.SetActive(true);
     }
 
     public void DesactivateIndicator()
     {
-        indicator.SetActive(false);
+        //indicator.SetActive(false);
         textIndicator.SetActive(false);
     }
 
@@ -44,6 +44,6 @@ public class TargetIndicator : MonoBehaviour
     public void StopProtection()
     {
         textProtect.SetActive(false);
-        indicator.SetActive(false);
+        //indicator.SetActive(false);
     }
 }
