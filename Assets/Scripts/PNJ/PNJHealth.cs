@@ -5,7 +5,7 @@ using TMPro;
 
 public class PNJHealth : MonoBehaviour
 {
-    static float dmg = 2f;
+    static float dmg = 5f;
     static float health = 100f;
 
     [SerializeField] private TextMeshProUGUI healthText;

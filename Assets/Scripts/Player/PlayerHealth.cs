@@ -6,7 +6,7 @@ using TMPro;
 public class PlayerHealth : MonoBehaviour
 {
     static float life = 100f;
-    static float dmg = 2f;
+    static float dmg = 5f;
     static float oxygenDmg = 0.1f;
     static float health = 10f;
     static float bulletDmg = 2f;
