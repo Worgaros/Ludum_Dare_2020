@@ -9,9 +9,12 @@ public class CheckWin : MonoBehaviour
     static float totalPart = 0f;
     [SerializeField] private TextMeshProUGUI partText;
 
+    MenuManager MenuManager;
+
     private void Start()
     {
-        winPanel.SetActive(false);
+        totalPart = 0f;
+        //winPanel.SetActive(false);
     }
     private void Update()
     {
@@ -19,7 +22,7 @@ public class CheckWin : MonoBehaviour
 
         if (totalPart >= 5)
         {
-            winPanel.SetActive(true);
+            MenuManager.GameOver();
         }
     }
 

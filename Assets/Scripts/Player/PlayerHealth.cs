@@ -14,10 +14,11 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private GameObject gameOverPanel;
     [SerializeField] private TextMeshProUGUI healthText;
 
+    MenuManager MenuManager;
+
     private void Start()
     {
         life = 100f;
-        gameOverPanel.SetActive(false);
     }
     private void Update()
     {
@@ -26,7 +27,7 @@ public class PlayerHealth : MonoBehaviour
         if (life <= 0f)
         {
             life = 0f;
-            GameOver();
+            MenuManager.GameOver();
         }
     }
 

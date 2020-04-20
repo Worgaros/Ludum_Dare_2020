@@ -11,6 +11,8 @@ public class PNJHealth : MonoBehaviour
     [SerializeField] private TextMeshProUGUI healthText;
     [SerializeField] GameObject gameOverPanel;
 
+    MenuManager MenuManager;
+
     private void Start()
     {
         health = 100f;
@@ -22,6 +24,7 @@ public class PNJHealth : MonoBehaviour
         if (health <= 0f)
         {
             health = 0f;
+            MenuManager.GameOver();
         }
     }
 
