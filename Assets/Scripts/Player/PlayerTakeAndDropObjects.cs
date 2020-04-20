@@ -27,11 +27,14 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
 
     Shooting shooting;
     TargetIndicator targetIndicator;
+    
+    Animator anim;
 
     void Start()
     {
         shooting = FindObjectOfType<Shooting>();
         targetIndicator = FindObjectOfType<TargetIndicator>();
+        anim = GetComponent<Animator>();
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -77,6 +80,7 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
             GameObject One = Instantiate(onePrefab, firePosition.position, onePrefab.transform.rotation);
             shooting.UnblockShootTakeParts();
             targetIndicator.DesactivateIndicator();
+            anim.SetBool("holdingEngrenage", false);
         }
         else if (have2 && Input.GetKeyDown("e") && canDrop)
         {
@@ -85,6 +89,7 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
             GameObject Two = Instantiate(twoPrefab, firePosition.position, twoPrefab.transform.rotation);
             shooting.UnblockShootTakeParts();
             targetIndicator.DesactivateIndicator();
+            anim.SetBool("holdingEcrou", false);
         }
         else if (have3 && Input.GetKeyDown("e") && canDrop)
         {
@@ -93,6 +98,7 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
             GameObject Three = Instantiate(threePrefab, firePosition.position, threePrefab.transform.rotation);
             shooting.UnblockShootTakeParts();
             targetIndicator.DesactivateIndicator();
+            anim.SetBool("holdingMarteau", false);
         }
         else if (have4 && Input.GetKeyDown("e") && canDrop)
         {
@@ -101,6 +107,7 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
             GameObject Four = Instantiate(fourPrefab, firePosition.position, fourPrefab.transform.rotation);
             shooting.UnblockShootTakeParts();
             targetIndicator.DesactivateIndicator();
+            anim.SetBool("holdingCle", false);
         }
         else if (have5 && Input.GetKeyDown("e") && canDrop)
         {
@@ -109,6 +116,7 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
             GameObject Five = Instantiate(fivePrefab, firePosition.position, fivePrefab.transform.rotation);
             shooting.UnblockShootTakeParts();
             targetIndicator.DesactivateIndicator();
+            anim.SetBool("holdingPlaque", false);
         }
         
         //Pick
@@ -122,6 +130,7 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
             shooting.BlockShootTakeParts();
             canPick1 = false;
             targetIndicator.ActivateIndicator();
+            anim.SetBool("holdingEngrenage", true);
         }
         else if (Input.GetKeyDown("e") && canPick2)
         {
@@ -133,6 +142,7 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
             shooting.BlockShootTakeParts();
             canPick2 = false;
             targetIndicator.ActivateIndicator();
+            anim.SetBool("holdingEcrou", true);
         }
         else if (Input.GetKeyDown("e") && canPick3)
         {
@@ -144,6 +154,7 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
             shooting.BlockShootTakeParts();
             canPick3 = false;
             targetIndicator.ActivateIndicator();
+            anim.SetBool("holdingMarteau", true);
         }
         else if (Input.GetKeyDown("e") && canPick4)
         {
@@ -155,6 +166,7 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
             shooting.BlockShootTakeParts();
             canPick4 = false;
             targetIndicator.ActivateIndicator();
+            anim.SetBool("holdingCle", true);
         }
         else if (Input.GetKeyDown("e") && canPick5)
         {
@@ -166,6 +178,7 @@ public class PlayerTakeAndDropObjects : MonoBehaviour
             shooting.BlockShootTakeParts();
             canPick5 = false;
             targetIndicator.ActivateIndicator();
+            anim.SetBool("holdingPlaque", true);
         }
     }
 
