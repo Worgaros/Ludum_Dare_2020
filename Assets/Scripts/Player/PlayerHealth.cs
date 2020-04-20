@@ -8,6 +8,7 @@ public class PlayerHealth : MonoBehaviour
     static float life = 100f;
     static float dmg = 0.01f;
     static float health = 10f;
+    static float bulletDmg = 5f;
     
     [SerializeField] private TextMeshProUGUI healthText;
     [SerializeField] private GameObject gameOverPanel;
@@ -15,24 +16,29 @@ public class PlayerHealth : MonoBehaviour
     private void Start()
     {
         life = 100f;
+        gameOverPanel.SetActive(false);
     }
     private void Update()
     {
        healthText.text = life.ToString("F0");
+
+        if (life <= 0f)
+        {
+            life = 0f;
+            gameOverPanel.SetActive(true);
+        }
     }
 
     public void TakeDmg()
     {
         Debug.Log("tookDamage");
         life -= dmg;
-        
-        if (life <= 0f)
-        {
-            life = 0f;
-            // gameOverPanel.SetActive(true);
-        }
     }
 
+    public void BulletDmg()
+    {
+        life -= bulletDmg;
+    }
     public void TakeHealth()
     {
         life += health;
@@ -47,7 +53,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if(collision.gameObject.tag == "ennemyBullet")
         {
-            TakeDmg();
+            BulletDmg();
         }
     }
 }
