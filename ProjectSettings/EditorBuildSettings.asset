@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MarvinScene.unity
     guid: 2fa0a8162c09f9d43a49a0a2a11b02e7
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 7e84a7b35d29c154b9ac68f9f48066cf
+  - enabled: 1
+    path: Assets/Scenes/Win.unity
+    guid: dea05e2af5923bc418e69b3c42418217
   m_configObjects: {}

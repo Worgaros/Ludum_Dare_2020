@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -27,7 +28,8 @@ public class PlayerHealth : MonoBehaviour
         if (life <= 0f)
         {
             life = 0f;
-            MenuManager.GameOver();
+            SceneManager.LoadScene("GameOver");
+            Time.timeScale = 0f;
         }
     }
 

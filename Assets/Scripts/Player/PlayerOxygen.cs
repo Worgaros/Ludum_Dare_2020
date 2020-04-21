@@ -27,7 +27,7 @@ public class PlayerOxygen : MonoBehaviour
             playerHealth.OxyDmg();
         }
         
-        currentOxygen -= Time.deltaTime*0.8f;
+        currentOxygen -= Time.deltaTime* 1f;
        // Debug.Log("oxygen" + currentOxygen);
         oxygen.setOxygen(currentOxygen, maxOxygen);
 

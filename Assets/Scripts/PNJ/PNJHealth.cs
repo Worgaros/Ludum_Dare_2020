@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PNJHealth : MonoBehaviour
 {
@@ -24,7 +25,8 @@ public class PNJHealth : MonoBehaviour
         if (health <= 0f)
         {
             health = 0f;
-            MenuManager.GameOver();
+            SceneManager.LoadScene("GameOver");
+            Time.timeScale = 0f;
         }
     }
 

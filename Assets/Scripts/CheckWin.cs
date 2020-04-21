@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class CheckWin : MonoBehaviour
 {
@@ -22,7 +23,8 @@ public class CheckWin : MonoBehaviour
 
         if (totalPart >= 5)
         {
-            MenuManager.GameOver();
+            winPanel.SetActive(true);
+            Time.timeScale = 0f;
         }
     }
 

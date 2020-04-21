@@ -25,11 +25,11 @@ public class MenuManager : MonoBehaviour
         Time.timeScale = 1f;
     }
 
-    public void GameOver()
-    {
-        SceneManager.LoadScene("GameOver");
-        Time.timeScale = 0f;
-    }
+    // public void GameOver()
+    // {
+    //     // SceneManager.LoadScene("GameOver");
+    //     // Time.timeScale = 0f;
+    // }
 
     public void Win()
     {
