@@ -1321,9 +1321,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b0a30ba8393a13940bceb9516f54afb3, type: 2}
-  m_sharedMaterial: {fileID: 5743686464812457851, guid: b0a30ba8393a13940bceb9516f54afb3,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1394,9 +1393,9 @@ MonoBehaviour:
     spaceCount: 53
     wordCount: 49
     linkCount: 0
-    lineCount: 9
+    lineCount: 7
     pageCount: 1
-    materialCount: 2
+    materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
@@ -1832,6 +1831,11 @@ PrefabInstance:
       propertyPath: Cam
       value: 
       objectReference: {fileID: 530317733}
+    - target: {fileID: 2231868856584712947, guid: 7b215239739a75f4a8b40ad9853864e4,
+        type: 3}
+      propertyPath: music
+      value: 
+      objectReference: {fileID: 338746864}
     - target: {fileID: 4037257522453780805, guid: 7b215239739a75f4a8b40ad9853864e4,
         type: 3}
       propertyPath: Loop
@@ -1847,6 +1851,12 @@ PrefabInstance:
 --- !u!4 &338746863 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1923438617, guid: 7b215239739a75f4a8b40ad9853864e4,
+    type: 3}
+  m_PrefabInstance: {fileID: 338746862}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &338746864 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4037257522453780805, guid: 7b215239739a75f4a8b40ad9853864e4,
     type: 3}
   m_PrefabInstance: {fileID: 338746862}
   m_PrefabAsset: {fileID: 0}

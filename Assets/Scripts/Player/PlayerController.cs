@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
     {
         if(Time.timeScale==0)
         {
-            music.Pause()
+            music.Pause();
         }
         if(Time.timeScale!=0)
         {
